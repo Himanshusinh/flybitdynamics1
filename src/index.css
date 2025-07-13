@@ -1,42 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* FLYBIT Dynamics - Professional Drone Light Show Design System */
 
 @layer base {
   :root {
+    /* Core Brand Colors - Inspired by drone technology and night sky */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 13% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 13% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 13% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Electric Blue/Cyan for technology feel */
+    --primary: 200 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 100% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Deep tech navy */
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Vibrant green for drone lights */
+    --accent: 120 100% 50%;
+    --accent-foreground: 220 13% 18%;
+    --accent-glow: 120 100% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Purple for premium feel */
+    --purple: 280 100% 60%;
+    --purple-glow: 280 100% 80%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Muted tones */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 13% 45%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --radius: 0.5rem;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 200 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Premium Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-hero: linear-gradient(135deg, hsl(220 25% 8%) 0%, hsl(220 25% 15%) 50%, hsl(200 100% 10%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
+    --gradient-tech: linear-gradient(90deg, hsl(var(--primary)) 0%, hsl(var(--purple)) 50%, hsl(var(--accent)) 100%);
+    
+    /* Shadows with glow effects */
+    --shadow-elegant: 0 20px 40px -10px hsl(var(--primary) / 0.1);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-purple-glow: 0 0 40px hsl(var(--purple) / 0.3);
+    --shadow-green-glow: 0 0 30px hsl(var(--accent) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 120 100% 60%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 200 100% 60%;
+
+    --gradient-card: linear-gradient(145deg, hsl(220 25% 10%) 0%, hsl(220 25% 12%) 100%);
+  }
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +160,92 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space-grotesk;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .tech-gradient {
+    background: var(--gradient-tech);
+  }
+
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+
+  /* Glow Effects */
+  .glow-blue {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-purple {
+    box-shadow: var(--shadow-purple-glow);
+  }
+
+  .glow-green {
+    box-shadow: var(--shadow-green-glow);
+  }
+
+  /* Animated Elements */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  /* Navigation Glass Effect */
+  .nav-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Professional Button Styles */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300 font-semibold;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-lg hover:shadow-xl transition-all duration-300 font-semibold;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-semibold;
+  }
+
+  .btn-glow {
+    @apply btn-primary glow-blue hover:scale-105;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  100% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
 }
