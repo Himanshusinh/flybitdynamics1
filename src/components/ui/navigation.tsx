@@ -31,7 +31,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={flybitLogo} alt="FLYBIT Dynamics" className="h-8 w-auto" />
+            <img src="/lovable-uploads/905818b5-70ce-4c63-9c27-8bf3a40fd783.png" alt="FLYBIT Dynamics" className="h-8 w-auto" />
             <span className="font-space-grotesk font-bold text-xl text-white">
               FLYBIT <span className="text-primary">DYNAMICS</span>
             </span>
