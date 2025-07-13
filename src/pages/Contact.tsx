@@ -23,19 +23,19 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 98765 43210", "+91 98765 43211"],
+    details: ["+91 9664612798"],
     action: "Call Now"
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["hello@flybitdynamics.com", "support@flybitdynamics.com"],
+    details: ["info@flybitdynamics.com"],
     action: "Send Email"
   },
   {
     icon: MapPin,
     title: "Location",
-    details: ["Mumbai, Maharashtra", "India"],
+    details: ["51.1 Satyamev Eminence, Science City Road", "Sola, Ahmedabad 380060"],
     action: "Get Directions"
   },
   {
@@ -173,7 +173,7 @@ export default function Contact() {
                         onChange={handleInputChange}
                         required
                         className="mt-2"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 9664612798"
                       />
                     </div>
                     <div>
@@ -318,7 +318,7 @@ export default function Contact() {
               Visit Our <span className="text-primary">Studio</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Located in the heart of Mumbai, our studio is equipped with the latest drone technology and testing facilities.
+              Located in Ahmedabad, our studio is equipped with the latest drone technology and testing facilities.
             </p>
           </div>
           
@@ -347,7 +347,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
               <Phone className="mr-2 w-5 h-5" />
-              Call Now: +91 98765 43210
+              Call Now: +91 9664612798
             </Button>
             <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-4">
               <MessageCircle className="mr-2 w-5 h-5" />

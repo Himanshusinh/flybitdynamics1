@@ -49,15 +49,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span>+91 98765 43210</span>
+                <span>+91 9664612798</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span>hello@flybitdynamics.com</span>
+                <span>info@flybitdynamics.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Mumbai, India</span>
+                <span>51.1 Satyamev Eminence, Science City Road, Sola, Ahmedabad 380060</span>
               </div>
             </div>
           </div>
