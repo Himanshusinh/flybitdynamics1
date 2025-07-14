@@ -166,7 +166,7 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proprietary <span className="text-accent">Software</span> Suite
+              Proprietary <span className="text-primary">Software</span> Suite
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               In-house developed software for animation, simulation, and real-time control of hundreds of drones.
@@ -250,7 +250,7 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Technical <span className="text-purple-500">Capabilities</span>
+              Technical <span className="text-primary">Capabilities</span>
             </h2>
           </div>
 

@@ -50,7 +50,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Where Wonder <span className="text-transparent bg-clip-text tech-gradient">Begins</span>
+            Where Wonder <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Begins</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform your event with breathtaking drone light shows powered by cutting-edge technology and unforgettable creativity.
