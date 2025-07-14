@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -107,6 +108,11 @@ const certifications = [
 ];
 
 export default function Technology() {
+  useEffect(() => {
+    document.title = "Drone Technology & Hardware | Advanced Aerial Systems - FLYBIT Dynamics";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Cutting-edge drone technology and hardware specifications. Military-grade components, GPS precision, and proprietary software for spectacular drone light shows in India.');
+  }, []);
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
@@ -234,7 +240,7 @@ export default function Technology() {
                 {certifications.map((cert, idx) => (
                   <div key={idx} className="flex items-center justify-between p-4 rounded-lg bg-background/50">
                     <span className="font-medium">{cert.name}</span>
-                    <Badge variant="secondary" className="bg-green-100 text-green-800">
+                    <Badge variant="secondary" className="bg-primary/10 text-primary">
                       {cert.status}
                     </Badge>
                   </div>

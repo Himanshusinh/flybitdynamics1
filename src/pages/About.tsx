@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Users, Target, Lightbulb, Award, ArrowRight, Heart, Zap, Globe } from "lucide-react";
@@ -67,6 +68,11 @@ const team = [
 ];
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About FLYBIT Dynamics - Premier Drone Light Show Company India | Our Story";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Learn about FLYBIT Dynamics, India\'s leading drone light show company. Our mission is to create breathtaking aerial displays for weddings, corporate events, and celebrations across India.');
+  }, []);
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}

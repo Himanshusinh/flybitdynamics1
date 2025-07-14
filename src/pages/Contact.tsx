@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -63,6 +63,11 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = "Contact FLYBIT Dynamics | Book Drone Light Show India | Get Quote";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Contact FLYBIT Dynamics for booking drone light shows in India. Get quotes for wedding shows, corporate events, and aerial displays. Call +91 9664612798 for free consultation.');
+  }, []);
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -110,8 +111,8 @@ const services = [
       "Festival activations"
     ],
     pricing: "Starting from ₹4,00,000",
-    color: "text-green-500",
-    bgColor: "bg-green-500/10"
+    color: "text-primary",
+    bgColor: "bg-primary/10"
   }
 ];
 
@@ -139,6 +140,11 @@ const processSteps = [
 ];
 
 export default function Services() {
+  useEffect(() => {
+    document.title = "Drone Light Show Services India | Wedding & Corporate Events - FLYBIT Dynamics";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Professional drone light show services in India. Wedding shows, corporate events, product launches, spiritual gatherings. Custom aerial displays by FLYBIT Dynamics.');
+  }, []);
+
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}

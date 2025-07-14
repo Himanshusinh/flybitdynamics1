@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -95,6 +96,11 @@ const categories = [
 ];
 
 export default function Blog() {
+  useEffect(() => {
+    document.title = "Drone Light Show Blog India | Wedding Ideas & Technology - FLYBIT Dynamics";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Read our blog for drone light show insights, wedding ideas, technology updates, and behind-the-scenes stories from FLYBIT Dynamics, India\'s premier drone show company.');
+  }, []);
+
   const featuredPosts = blogPosts.filter(post => post.featured);
   const recentPosts = blogPosts.filter(post => !post.featured);
 

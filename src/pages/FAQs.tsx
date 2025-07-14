@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -98,6 +98,11 @@ const faqCategories = [
 ];
 
 export default function FAQs() {
+  useEffect(() => {
+    document.title = "Drone Light Show FAQs India | Common Questions - FLYBIT Dynamics";
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Frequently asked questions about drone light shows in India. Get answers about pricing, booking, safety, and technical specifications from FLYBIT Dynamics experts.');
+  }, []);
+
   const [selectedCategory, setSelectedCategory] = useState(0);
 
   return (
@@ -189,12 +194,12 @@ export default function FAQs() {
             </Card>
 
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
-              <Mail className="w-16 h-16 text-purple-500 mx-auto mb-4" />
+              <Mail className="w-16 h-16 text-primary mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-4">Email Support</h3>
               <p className="text-muted-foreground mb-4">
                 Detailed responses within 24 hours.
               </p>
-              <Button variant="outline" className="group-hover:bg-purple-500 group-hover:text-white transition-colors">
+              <Button variant="outline" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                 Send Email
               </Button>
             </Card>
