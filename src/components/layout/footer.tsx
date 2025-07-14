@@ -38,7 +38,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center mb-6">
-              <img src="/lovable-uploads/ff447dbb-7066-4d66-b0e3-99bd3e8b7f9a.png" alt="FLYBIT Dynamics" className="h-10 w-auto" />
+              <img src="/lovable-uploads/32653dea-0b30-472d-83b7-4682377a49ba.png" alt="FLYBIT Dynamics" className="h-10 w-auto" />
             </Link>
             <p className="text-secondary-foreground/80 mb-6 max-w-md">
               Where Wonder Begins. We are storytellers of the sky, creating magical drone light shows that transform your special moments into unforgettable experiences.

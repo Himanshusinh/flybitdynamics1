@@ -40,6 +40,7 @@ export function Navigation() {
               <Link
                 key={item.name}
                 to={item.href}
+                onClick={() => window.scrollTo(0, 0)}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-primary",
                   isActive(item.href) 
@@ -77,7 +78,10 @@ export function Navigation() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    window.scrollTo(0, 0);
+                  }}
                   className={cn(
                     "block px-3 py-2 text-base font-medium transition-colors hover:text-primary",
                     isActive(item.href) 
