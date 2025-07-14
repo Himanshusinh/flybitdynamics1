@@ -349,7 +349,7 @@ export default function Contact() {
               <Phone className="mr-2 w-5 h-5" />
               Call Now: +91 9664612798
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
               <MessageCircle className="mr-2 w-5 h-5" />
               WhatsApp Us
             </Button>

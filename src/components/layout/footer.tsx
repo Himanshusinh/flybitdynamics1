@@ -67,6 +67,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-secondary-foreground/80 hover:text-primary transition-colors"
                   >
                     {item.name}
@@ -83,6 +84,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-secondary-foreground/80 hover:text-primary transition-colors"
                   >
                     {item.name}
@@ -99,6 +101,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     to={item.href}
+                    onClick={() => window.scrollTo(0, 0)}
                     className="text-secondary-foreground/80 hover:text-primary transition-colors"
                   >
                     {item.name}

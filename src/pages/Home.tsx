@@ -62,7 +62,7 @@ export default function Home() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-4"
+              className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4"
             >
               <Play className="mr-2 w-5 h-5" />
               Watch Our Drones in Action
@@ -197,7 +197,7 @@ export default function Home() {
             <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
               Get a Quote <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
               <Users className="mr-2 w-5 h-5" />
               Schedule a Call
             </Button>

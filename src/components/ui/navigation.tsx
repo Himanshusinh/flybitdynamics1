@@ -26,7 +26,7 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 nav-glass">
+    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -42,10 +42,10 @@ export function Navigation() {
                 to={item.href}
                 onClick={() => window.scrollTo(0, 0)}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
+                  "text-sm font-medium transition-colors",
                   isActive(item.href) 
                     ? "text-primary" 
-                    : "text-white/90"
+                    : "text-[#3D473B] hover:text-primary"
                 )}
               >
                 {item.name}
@@ -63,7 +63,7 @@ export function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white"
+              className="text-[#3D473B]"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -83,10 +83,10 @@ export function Navigation() {
                     window.scrollTo(0, 0);
                   }}
                   className={cn(
-                    "block px-3 py-2 text-base font-medium transition-colors hover:text-primary",
+                    "block px-3 py-2 text-base font-medium transition-colors",
                     isActive(item.href) 
                       ? "text-primary" 
-                      : "text-white/90"
+                      : "text-[#3D473B] hover:text-primary"
                   )}
                 >
                   {item.name}
