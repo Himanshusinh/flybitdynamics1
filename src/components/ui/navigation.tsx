@@ -8,7 +8,19 @@ import flybitLogo from "@/assets/flybit-logo.png";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "Services", href: "/services" },
+  { 
+    name: "Services", 
+    href: "/services",
+    subMenu: [
+      { name: "Social Events", href: "/our-projects?category=social-events" },
+      { name: "Corporate Events", href: "/our-projects?category=corporate-events" },
+      { name: "Government Events", href: "/our-projects?category=government-events" },
+      { name: "Product Events", href: "/our-projects?category=product-events" },
+      { name: "Social Gathering", href: "/our-projects?category=social-gathering" },
+      { name: "Sports & Entertainment", href: "/our-projects?category=sports-entertainment" },
+    ]
+  },
+  { name: "Our Projects", href: "/our-projects" },
   { name: "Technology", href: "/technology" },
   { name: "FAQs", href: "/faqs" },
   { name: "Blog", href: "/blog" },
@@ -17,6 +29,7 @@ const navigation = [
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const location = useLocation();
 
   const isActive = (path: string) => {
@@ -37,19 +50,42 @@ export function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={() => window.scrollTo(0, 0)}
-                className={cn(
-                  "text-sm font-medium transition-colors",
-                  isActive(item.href) 
-                    ? "text-primary" 
-                    : "text-[#3D473B] hover:text-primary"
-                )}
+              <div 
+                key={item.name} 
+                className="relative group"
+                onMouseEnter={() => setHoveredItem(item.name)}
+                onMouseLeave={() => setHoveredItem(null)}
               >
-                {item.name}
-              </Link>
+                <Link
+                  to={item.href}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={cn(
+                    "text-sm font-medium transition-colors",
+                    isActive(item.href) 
+                      ? "text-primary" 
+                      : "text-[#3D473B] hover:text-primary"
+                  )}
+                >
+                  {item.name}
+                </Link>
+                {/* Submenu */}
+                {item.subMenu && hoveredItem === item.name && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md border border-white/20 rounded-lg shadow-lg z-50">
+                    <div className="py-2">
+                      {item.subMenu.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          onClick={() => window.scrollTo(0, 0)}
+                          className="block px-4 py-2 text-sm text-[#3D473B] hover:text-primary hover:bg-primary/5 transition-colors"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
             <Button variant="default" className="btn-glow">
               <Phone className="w-4 h-4 mr-2" />
