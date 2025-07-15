@@ -1,9 +1,14 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { ArrowRight, Play, CheckCircle, Heart, Building, Users, Rocket, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-drone-show.jpg";
+import heroImage1 from "@/assets/hero-drone-show.jpg";
+import heroImage2 from "@/assets/hero-drone-1.jpg";
+import heroImage3 from "@/assets/hero-drone-2.jpg";
+import heroImage4 from "@/assets/hero-drone-3.jpg";
+import heroImage5 from "@/assets/hero-drone-4.jpg";
 
 const highlights = [
   {
@@ -35,6 +40,8 @@ const stats = [
   { number: "24/7", label: "Support Available" }
 ];
 
+const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
+
 export default function Home() {
   useEffect(() => {
     document.title = "FLYBIT Dynamics - Premier Drone Light Show Company India | Best Drone Wedding Show";
@@ -44,15 +51,23 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      >
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <Carousel className="absolute inset-0">
+          <CarouselContent>
+            {heroImages.map((image, index) => (
+              <CarouselItem key={index}>
+                <div 
+                  className="min-h-screen bg-cover bg-center bg-no-repeat"
+                  style={{
+                    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${image})`,
+                  }}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-4" />
+          <CarouselNext className="right-4" />
+        </Carousel>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
