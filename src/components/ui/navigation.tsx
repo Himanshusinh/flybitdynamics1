@@ -70,13 +70,20 @@ export function Navigation() {
                 </Link>
                 {/* Submenu */}
                 {item.subMenu && hoveredItem === item.name && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md border border-white/20 rounded-lg shadow-lg z-50">
+                  <div 
+                    className="absolute top-full left-0 mt-2 w-56 bg-white/95 backdrop-blur-md border border-white/20 rounded-lg shadow-lg z-50"
+                    onMouseEnter={() => setHoveredItem(item.name)}
+                    onMouseLeave={() => setHoveredItem(null)}
+                  >
                     <div className="py-2">
                       {item.subMenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          onClick={() => window.scrollTo(0, 0)}
+                          onClick={() => {
+                            setHoveredItem(null);
+                            window.scrollTo(0, 0);
+                          }}
                           className="block px-4 py-2 text-sm text-[#3D473B] hover:text-primary hover:bg-primary/5 transition-colors"
                         >
                           {subItem.name}
