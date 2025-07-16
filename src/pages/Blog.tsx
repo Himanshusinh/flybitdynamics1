@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -97,13 +97,18 @@ const categories = [
 ];
 
 export default function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState("All Posts");
+  
   useEffect(() => {
     document.title = "Drone Light Show Blog India | Wedding Ideas & Technology - FLYBIT Dynamics";
     document.querySelector('meta[name="description"]')?.setAttribute('content', 'Read our blog for drone light show insights, wedding ideas, technology updates, and behind-the-scenes stories from FLYBIT Dynamics, India\'s premier drone show company.');
   }, []);
 
   const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.filter(post => !post.featured);
+  
+  const filteredPosts = selectedCategory === "All Posts" 
+    ? blogPosts.filter(post => !post.featured)
+    : blogPosts.filter(post => !post.featured && post.category === selectedCategory);
 
   return (
     <div className="min-h-screen pt-16">
@@ -186,10 +191,12 @@ export default function Blog() {
                     ))}
                   </div>
 
-                  <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    Read Full Article
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                  <Link to={`/blog/${post.id}`}>
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      Read Full Article
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </Link>
                 </div>
               </Card>
             ))}
@@ -209,8 +216,9 @@ export default function Blog() {
                   {categories.map((category) => (
                     <button
                       key={category.name}
+                      onClick={() => setSelectedCategory(category.name)}
                       className={`w-full text-left p-3 rounded-lg transition-colors ${
-                        category.active 
+                        selectedCategory === category.name 
                           ? 'bg-primary text-primary-foreground' 
                           : 'hover:bg-muted/50'
                       }`}
@@ -232,7 +240,7 @@ export default function Blog() {
               </h2>
               
               <div className="space-y-8">
-                {recentPosts.map((post) => (
+                {filteredPosts.length > 0 ? filteredPosts.map((post) => (
                   <Card key={post.id} className="p-6 card-gradient hover:shadow-lg transition-all duration-300 group">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div className="aspect-video md:aspect-square bg-muted/50 rounded-lg relative overflow-hidden">
@@ -279,15 +287,28 @@ export default function Blog() {
                               </Badge>
                             ))}
                           </div>
-                          <Button variant="outline" size="sm">
-                            Read More
-                            <ArrowRight className="ml-2 w-4 h-4" />
-                          </Button>
+                          <Link to={`/blog/${post.id}`}>
+                            <Button variant="outline" size="sm">
+                              Read More
+                              <ArrowRight className="ml-2 w-4 h-4" />
+                            </Button>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </Card>
-                ))}
+                )) : (
+                  <div className="text-center py-12">
+                    <p className="text-xl text-muted-foreground">No articles found in this category.</p>
+                    <Button 
+                      variant="outline" 
+                      onClick={() => setSelectedCategory("All Posts")}
+                      className="mt-4"
+                    >
+                      View All Posts
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

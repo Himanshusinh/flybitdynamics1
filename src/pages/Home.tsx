@@ -64,7 +64,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <div 
-            className="min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+            className="min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-[2000ms] ease-in-out"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${heroImages[currentImageIndex]})`,
             }}
