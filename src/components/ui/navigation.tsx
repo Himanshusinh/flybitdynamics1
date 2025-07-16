@@ -8,9 +8,10 @@ import flybitLogo from "@/assets/flybit-logo.png";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
   { 
-    name: "Services", 
-    href: "/services",
+    name: "Our Projects", 
+    href: "/our-projects",
     subMenu: [
       { name: "Social Events", href: "/our-projects?category=social-events" },
       { name: "Corporate Events", href: "/our-projects?category=corporate-events" },
@@ -20,7 +21,6 @@ const navigation = [
       { name: "Sports & Entertainment", href: "/our-projects?category=sports-entertainment" },
     ]
   },
-  { name: "Our Projects", href: "/our-projects" },
   { name: "Technology", href: "/technology" },
   { name: "FAQs", href: "/faqs" },
   { name: "Blog", href: "/blog" },

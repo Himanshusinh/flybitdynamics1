@@ -336,12 +336,9 @@ export default function OurProjects() {
                         alt={project.title}
                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                      <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <Button size="lg" className="btn-glow">
-                          <Play className="mr-2 w-5 h-5" />
-                          View Project
-                        </Button>
-                      </div>
+                       <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                         <Play className="w-12 h-12 text-white" />
+                       </div>
                     </div>
                     <CardContent className="p-6">
                       <div className="flex flex-wrap gap-2 mb-3">
@@ -375,11 +372,6 @@ export default function OurProjects() {
                           {project.attendees} attendees
                         </div>
                       </div>
-                      <Link to={`/project/${project.id}`}>
-                        <Button className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                          View Details
-                        </Button>
-                      </Link>
                     </CardContent>
                   </Card>
                 ))}
