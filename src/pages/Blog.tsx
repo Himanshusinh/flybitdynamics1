@@ -100,8 +100,97 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All Posts");
   
   useEffect(() => {
-    document.title = "Drone Light Show Blog India | Wedding Ideas & Technology - FLYBIT Dynamics";
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Read our blog for drone light show insights, wedding ideas, technology updates, and behind-the-scenes stories from FLYBIT Dynamics, India\'s premier drone show company.');
+    document.title = "Blog - Drone Show Insights & Tips | FLYBIT Dynamics India";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Latest insights, tips, and news about drone light shows in India. Wedding drone show ideas, technology updates, behind-the-scenes content from India\'s premier drone entertainment company FLYBIT Dynamics.');
+    }
+
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', 'drone show blog India, drone light show tips, wedding drone ideas India, drone technology news, drone show guide India, drone entertainment blog, aerial show insights, drone wedding planning India, corporate drone events blog, drone show behind scenes, FLYBIT Dynamics blog, Indian drone industry news');
+    }
+
+    // Add Open Graph tags
+    const addOrUpdateMeta = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateMeta('og:title', 'Blog - Drone Show Insights & Tips | FLYBIT Dynamics India');
+    addOrUpdateMeta('og:description', 'Latest insights, tips, and news about drone light shows in India. Wedding ideas, technology updates, and behind-the-scenes content.');
+    addOrUpdateMeta('og:type', 'blog');
+    addOrUpdateMeta('og:url', 'https://flybitdynamics.com/blog');
+    addOrUpdateMeta('og:image', '/src/assets/blog-banner.jpg');
+    addOrUpdateMeta('og:site_name', 'FLYBIT Dynamics');
+    addOrUpdateMeta('og:locale', 'en_IN');
+
+    // Add Twitter Card tags
+    const addOrUpdateTwitterMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateTwitterMeta('twitter:card', 'summary_large_image');
+    addOrUpdateTwitterMeta('twitter:title', 'Blog - Drone Show Insights & Tips | FLYBIT Dynamics India');
+    addOrUpdateTwitterMeta('twitter:description', 'Latest insights, tips, and news about drone light shows in India from premier drone entertainment company.');
+    addOrUpdateTwitterMeta('twitter:image', '/src/assets/blog-banner.jpg');
+    addOrUpdateTwitterMeta('twitter:site', '@FlybitDynamics');
+
+    // Add Blog schema
+    const addStructuredData = () => {
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "FLYBIT Dynamics Blog",
+        "description": "Latest insights, tips, and news about drone light shows in India",
+        "url": "https://flybitdynamics.com/blog",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FLYBIT Dynamics",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://flybitdynamics.com/src/assets/flybit-logo.png"
+          }
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "BlogPosting",
+              "headline": "Welcome to FLYBIT Dynamics: Where Wonder Begins",
+              "description": "Discover the story behind India's premier drone light show company",
+              "datePublished": "2024-01-15",
+              "author": {
+                "@type": "Person",
+                "name": "Rajesh Kumar"
+              }
+            }
+          ]
+        }
+      });
+      document.head.appendChild(script);
+    };
+
+    addStructuredData();
   }, []);
 
   const featuredPosts = blogPosts.filter(post => post.featured);

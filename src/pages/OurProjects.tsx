@@ -245,8 +245,113 @@ export default function OurProjects() {
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "all");
 
   useEffect(() => {
-    document.title = "Our Projects - FLYBIT Dynamics | Drone Light Show Portfolio India";
-    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Explore our portfolio of stunning drone light shows across India. From wedding shows to corporate events, see how FLYBIT Dynamics creates magical experiences with drone technology.');
+    document.title = "Our Projects - Premier Drone Light Shows Portfolio | FLYBIT Dynamics India";
+    
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore FLYBIT Dynamics portfolio of spectacular drone light shows across India. Wedding drone shows, corporate events, government celebrations. Best Indian drone show company with 500+ drones, 100+ successful projects in 50+ cities.');
+    }
+
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', 'drone show portfolio India, drone light show projects, wedding drone shows India, corporate drone events, government drone displays, drone show company portfolio, Indian drone entertainment, aerial light shows portfolio, drone wedding projects India, best drone show examples India, drone event gallery, FLYBIT Dynamics projects, drone show case studies India');
+    }
+
+    // Add Open Graph tags
+    const addOrUpdateMeta = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateMeta('og:title', 'Our Projects - Premier Drone Light Shows Portfolio | FLYBIT Dynamics India');
+    addOrUpdateMeta('og:description', 'Explore spectacular drone light show projects across India. Wedding shows, corporate events, government celebrations by leading Indian drone company.');
+    addOrUpdateMeta('og:type', 'website');
+    addOrUpdateMeta('og:url', 'https://flybitdynamics.com/our-projects');
+    addOrUpdateMeta('og:image', '/src/assets/services-banner.jpg');
+    addOrUpdateMeta('og:site_name', 'FLYBIT Dynamics');
+    addOrUpdateMeta('og:locale', 'en_IN');
+
+    // Add Twitter Card tags
+    const addOrUpdateTwitterMeta = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    addOrUpdateTwitterMeta('twitter:card', 'summary_large_image');
+    addOrUpdateTwitterMeta('twitter:title', 'Our Projects - Premier Drone Light Shows Portfolio | FLYBIT Dynamics India');
+    addOrUpdateTwitterMeta('twitter:description', 'Explore spectacular drone light show projects across India. Wedding shows, corporate events, government celebrations.');
+    addOrUpdateTwitterMeta('twitter:image', '/src/assets/services-banner.jpg');
+    addOrUpdateTwitterMeta('twitter:site', '@FlybitDynamics');
+
+    // Add schema.org structured data
+    const addStructuredData = () => {
+      const existingScript = document.querySelector('script[type="application/ld+json"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "FLYBIT Dynamics",
+        "description": "Premier drone light show company in India specializing in wedding shows, corporate events, and aerial entertainment",
+        "url": "https://flybitdynamics.com",
+        "logo": "https://flybitdynamics.com/src/assets/flybit-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-XXXXXXXXXX",
+          "contactType": "customer service",
+          "areaServed": "IN",
+          "availableLanguage": ["English", "Hindi"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.facebook.com/flybitdynamics",
+          "https://www.instagram.com/flybitdynamics",
+          "https://www.youtube.com/flybitdynamics"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Drone Light Show Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Wedding Drone Shows",
+                "description": "Spectacular drone light shows for weddings and social events"
+              }
+            },
+            {
+              "@type": "Offer", 
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Corporate Drone Events",
+                "description": "Professional drone displays for corporate events and product launches"
+              }
+            }
+          ]
+        }
+      });
+      document.head.appendChild(script);
+    };
+
+    addStructuredData();
   }, []);
 
   useEffect(() => {

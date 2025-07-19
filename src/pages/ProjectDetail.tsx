@@ -51,8 +51,114 @@ export default function ProjectDetail() {
 
   useEffect(() => {
     if (project) {
-      document.title = `${project.title} - FLYBIT Dynamics Project Portfolio`;
-      document.querySelector('meta[name="description"]')?.setAttribute('content', `${project.description.substring(0, 150)}...`);
+      document.title = `${project.title} - Premier Drone Light Show | FLYBIT Dynamics India`;
+      
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', `${project.description.substring(0, 150)}... Experience spectacular drone light shows by India's premier drone entertainment company FLYBIT Dynamics.`);
+      }
+
+      const metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (metaKeywords) {
+        const categoryKeywords = {
+          'social-events': 'wedding drone show India, social event drone display, marriage drone lights India',
+          'corporate-events': 'corporate drone show India, business event drone display, product launch drone show India',
+          'government-events': 'government drone show India, official event drone display, patriotic drone show India',
+          'product-events': 'product launch drone show India, brand event drone display, marketing drone show India'
+        };
+        const keywords = categoryKeywords[project.category as keyof typeof categoryKeywords] || 'drone show India';
+        metaKeywords.setAttribute('content', `${keywords}, ${project.tags.join(', ')}, ${project.location}, FLYBIT Dynamics, drone light show company India, aerial entertainment India`);
+      }
+
+      // Add Open Graph tags
+      const addOrUpdateMeta = (property: string, content: string) => {
+        let meta = document.querySelector(`meta[property="${property}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('property', property);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      addOrUpdateMeta('og:title', `${project.title} - Premier Drone Light Show | FLYBIT Dynamics`);
+      addOrUpdateMeta('og:description', project.description);
+      addOrUpdateMeta('og:type', 'article');
+      addOrUpdateMeta('og:url', `https://flybitdynamics.com/projects/${project.id}`);
+      addOrUpdateMeta('og:image', project.image);
+      addOrUpdateMeta('og:site_name', 'FLYBIT Dynamics');
+      addOrUpdateMeta('og:locale', 'en_IN');
+      addOrUpdateMeta('article:author', 'FLYBIT Dynamics');
+      addOrUpdateMeta('article:published_time', project.date);
+      addOrUpdateMeta('article:section', project.category);
+      project.tags.forEach((tag, index) => {
+        addOrUpdateMeta(`article:tag${index}`, tag);
+      });
+
+      // Add Twitter Card tags
+      const addOrUpdateTwitterMeta = (name: string, content: string) => {
+        let meta = document.querySelector(`meta[name="${name}"]`);
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.setAttribute('name', name);
+          document.head.appendChild(meta);
+        }
+        meta.setAttribute('content', content);
+      };
+
+      addOrUpdateTwitterMeta('twitter:card', 'summary_large_image');
+      addOrUpdateTwitterMeta('twitter:title', `${project.title} | FLYBIT Dynamics`);
+      addOrUpdateTwitterMeta('twitter:description', project.description);
+      addOrUpdateTwitterMeta('twitter:image', project.image);
+      addOrUpdateTwitterMeta('twitter:site', '@FlybitDynamics');
+
+      // Add Event schema
+      const addStructuredData = () => {
+        const existingScript = document.querySelector('script[type="application/ld+json"]');
+        if (existingScript) {
+          existingScript.remove();
+        }
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": project.title,
+          "description": project.description,
+          "image": project.image,
+          "startDate": project.date,
+          "location": {
+            "@type": "Place",
+            "name": project.location,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": project.location.split(', ')[0],
+              "addressRegion": project.location.split(', ')[1],
+              "addressCountry": "IN"
+            }
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "FLYBIT Dynamics",
+            "url": "https://flybitdynamics.com"
+          },
+          "performer": {
+            "@type": "Organization",
+            "name": "FLYBIT Dynamics",
+            "description": "Premier drone light show company in India"
+          },
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "audience": {
+            "@type": "Audience",
+            "audienceType": project.category.replace('-', ' ')
+          }
+        });
+        document.head.appendChild(script);
+      };
+
+      addStructuredData();
     }
   }, [project]);
 
