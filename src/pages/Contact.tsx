@@ -284,7 +284,11 @@ export default function Contact() {
               <Card className="p-6 card-gradient mb-8">
                 <h3 className="text-xl font-semibold mb-4">Quick Actions</h3>
                 <div className="space-y-3">
-                  <Button variant="outline" className="w-full justify-start">
+                  <Button 
+                    variant="outline" 
+                    className="w-full justify-start"
+                    onClick={() => window.open('https://wa.me/919664612798?text=Hi! I am interested in your drone light show services.', '_blank')}
+                  >
                     <MessageCircle className="mr-2 w-4 h-4" />
                     WhatsApp Chat
                   </Button>
@@ -362,7 +366,12 @@ export default function Contact() {
               <Phone className="mr-2 w-5 h-5" />
               Call Now: +91 9664612798
             </Button>
-            <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4"
+              onClick={() => window.open('https://wa.me/919664612798?text=Hi! I am interested in your drone light show services.', '_blank')}
+            >
               <MessageCircle className="mr-2 w-5 h-5" />
               WhatsApp Us
             </Button>

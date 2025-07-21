@@ -5,6 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, Building2, Flag, Rocket, Church, Trophy, ArrowRight, Zap, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import servicesBanner from "@/assets/services-banner.jpg";
+import serviceSocial from "@/assets/service-social.jpg";
+import serviceCorporate from "@/assets/service-corporate.jpg";
+import serviceGovernment from "@/assets/service-government.jpg";
+import serviceProduct from "@/assets/service-product.jpg";
+import serviceSpiritual from "@/assets/service-spiritual.jpg";
+import serviceSports from "@/assets/service-sports.jpg";
 
 const services = [
   {
@@ -23,7 +29,8 @@ const services = [
     ],
     pricing: "Starting from ₹1,50,000",
     color: "text-pink-500",
-    bgColor: "bg-pink-500/10"
+    bgColor: "bg-pink-500/10",
+    image: serviceSocial
   },
   {
     id: "corporate",
@@ -41,7 +48,8 @@ const services = [
     ],
     pricing: "Starting from ₹3,00,000",
     color: "text-blue-500",
-    bgColor: "bg-blue-500/10"
+    bgColor: "bg-blue-500/10",
+    image: serviceCorporate
   },
   {
     id: "government",
@@ -59,7 +67,8 @@ const services = [
     ],
     pricing: "Custom pricing available",
     color: "text-orange-500",
-    bgColor: "bg-orange-500/10"
+    bgColor: "bg-orange-500/10",
+    image: serviceGovernment
   },
   {
     id: "product",
@@ -77,7 +86,8 @@ const services = [
     ],
     pricing: "Starting from ₹2,50,000",
     color: "text-purple-500",
-    bgColor: "bg-purple-500/10"
+    bgColor: "bg-purple-500/10",
+    image: serviceProduct
   },
   {
     id: "spiritual",
@@ -95,7 +105,8 @@ const services = [
     ],
     pricing: "Starting from ₹2,00,000",
     color: "text-yellow-500",
-    bgColor: "bg-yellow-500/10"
+    bgColor: "bg-yellow-500/10",
+    image: serviceSpiritual
   },
   {
     id: "sports",
@@ -113,7 +124,8 @@ const services = [
     ],
     pricing: "Starting from ₹4,00,000",
     color: "text-primary",
-    bgColor: "bg-primary/10"
+    bgColor: "bg-primary/10",
+    image: serviceSports
   }
 ];
 
@@ -188,6 +200,15 @@ export default function Services() {
                       {service.pricing}
                     </Badge>
                   </div>
+                </div>
+
+                {/* Service Image */}
+                <div className="w-full h-48 rounded-lg overflow-hidden mb-6">
+                  <img 
+                    src={service.image} 
+                    alt={`${service.title} drone light show`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
                 
                 <p className="text-muted-foreground mb-6">

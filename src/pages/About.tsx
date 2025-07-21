@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Users, Target, Lightbulb, Award, ArrowRight, Heart, Zap, Globe } from "lucide-react";
 import aboutBanner from "@/assets/about-banner.jpg";
+import aboutJourney from "@/assets/about-journey.jpg";
+import teamMember1 from "@/assets/team-member-1.jpg";
+import teamMember2 from "@/assets/team-member-2.jpg";
+import teamMember3 from "@/assets/team-member-3.jpg";
+import teamMember4 from "@/assets/team-member-4.jpg";
 
 const values = [
   {
@@ -54,17 +59,26 @@ const team = [
   {
     name: "Rajesh Kumar",
     role: "Founder & CEO",
-    description: "Aerospace engineer with 15+ years in drone technology"
+    description: "Aerospace engineer with 15+ years in drone technology",
+    image: teamMember1
   },
   {
     name: "Priya Sharma",
     role: "Creative Director",
-    description: "Visual artist specializing in large-scale light installations"
+    description: "Visual artist specializing in large-scale light installations",
+    image: teamMember2
   },
   {
     name: "Dr. Amit Patel",
     role: "Technical Lead",
-    description: "PhD in Robotics with expertise in swarm intelligence"
+    description: "PhD in Robotics with expertise in swarm intelligence",
+    image: teamMember3
+  },
+  {
+    name: "Kavya Reddy",
+    role: "Operations Manager",
+    description: "Project management expert with 10+ years in event planning",
+    image: teamMember4
   }
 ];
 
@@ -121,6 +135,14 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
+              {/* Journey Image */}
+              <div className="w-full h-80 rounded-lg overflow-hidden mb-6">
+                <img 
+                  src={aboutJourney} 
+                  alt="FLYBIT Dynamics team working on drone technology"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <Card className="p-8 card-gradient glow-blue">
                 <h3 className="text-2xl font-bold mb-6 text-center">We Are More Than Technology</h3>
                 <p className="text-muted-foreground text-center text-lg italic">
@@ -202,12 +224,16 @@ export default function About() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <Card key={index} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-primary to-accent p-1">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <Users className="w-12 h-12 text-primary" />
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-r from-primary to-accent p-1">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-white">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
