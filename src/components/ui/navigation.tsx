@@ -95,10 +95,12 @@ export function Navigation() {
                 )}
               </div>
             ))}
-            <Button variant="default" className="btn-glow">
-              <Phone className="w-4 h-4 mr-2" />
-              Book a Show
-            </Button>
+            <Link to="/contact">
+              <Button variant="default" className="btn-glow">
+                <Phone className="w-4 h-4 mr-2" />
+                Book a Show
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -137,10 +139,12 @@ export function Navigation() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button variant="default" className="btn-glow w-full">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Book a Show
-                </Button>
+                <Link to="/contact">
+                  <Button variant="default" className="btn-glow w-full">
+                    <Phone className="w-4 h-4 mr-2" />
+                    Book a Show
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

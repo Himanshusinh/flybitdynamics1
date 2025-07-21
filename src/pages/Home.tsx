@@ -79,9 +79,11 @@ export default function Home() {
             Transform your event with breathtaking drone light shows powered by cutting-edge technology and unforgettable creativity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="btn-glow text-lg px-8 py-4">
-              Book a Show <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="btn-glow text-lg px-8 py-4">
+                Book a Show <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
             <Button 
               variant="outline" 
               size="lg" 
@@ -217,13 +219,17 @@ export default function Home() {
             Let's create something extraordinary together. Your vision, our technology, unlimited possibilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
-              Get a Quote <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
-              <Users className="mr-2 w-5 h-5" />
-              Schedule a Call
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+                Get a Quote <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
+                <Users className="mr-2 w-5 h-5" />
+                Schedule a Call
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

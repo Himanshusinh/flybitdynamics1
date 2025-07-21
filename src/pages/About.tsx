@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import { Users, Target, Lightbulb, Award, ArrowRight, Heart, Zap, Globe } from "lucide-react";
 import aboutBanner from "@/assets/about-banner.jpg";
 import aboutJourney from "@/assets/about-journey.jpg";
@@ -254,9 +255,11 @@ export default function About() {
           <p className="text-xl mb-8 opacity-90 leading-relaxed">
             To revolutionize event entertainment through innovative drone technology, creating emotionally impactful performances that bring people together, celebrate human achievements, and inspire wonder in audiences across India and beyond.
           </p>
-          <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
-            Join Our Journey <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+              Join Our Journey <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

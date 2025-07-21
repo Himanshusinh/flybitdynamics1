@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Link } from "react-router-dom";
 import { X } from "lucide-react";
 import serviceSocial from "@/assets/service-social.jpg";
 import serviceCorporate from "@/assets/service-corporate.jpg";
@@ -235,9 +236,11 @@ export default function Projects() {
             Let's discuss your vision and create a drone light show that will become part of your most cherished memories.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
-              Get Custom Quote
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+                Get Custom Quote
+              </Button>
+            </Link>
             <Button 
               size="lg" 
               variant="outline" 

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import technologyBanner from "@/assets/technology-banner.jpg";
 import { 
   Cpu, 
@@ -302,13 +303,17 @@ export default function Technology() {
             Our R&D team continuously develops new technologies to create even more spectacular and safe drone light shows.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
-              Technical Partnership <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
-              <Map className="mr-2 w-5 h-5" />
-              View Our Capabilities
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+                Technical Partnership <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
+                <Map className="mr-2 w-5 h-5" />
+                View Our Capabilities
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

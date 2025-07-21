@@ -10,10 +10,12 @@ const navigation = {
     { name: "Blog", href: "/blog" },
   ],
   services: [
-    { name: "Wedding Shows", href: "/services#social" },
+    { name: "Social Events", href: "/services#social" },
     { name: "Corporate Events", href: "/services#corporate" },
     { name: "Government Events", href: "/services#government" },
     { name: "Product Launches", href: "/services#product" },
+    { name: "Spiritual Gatherings", href: "/services#spiritual" },
+    { name: "Sports & Entertainment", href: "/services#sports" },
   ],
   support: [
     { name: "FAQs", href: "/faqs" },
