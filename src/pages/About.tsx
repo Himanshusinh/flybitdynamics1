@@ -139,8 +139,8 @@ export default function About() {
               {/* Journey Image */}
               <div className="w-full h-80 rounded-lg overflow-hidden mb-6">
                 <img 
-                  src={aboutJourney} 
-                  alt="FLYBIT Dynamics team working on drone technology"
+                  src="/lovable-uploads/d16430af-f67e-462b-add5-f6cb1fc3e1be.png" 
+                  alt="FLYBIT Dynamics - Professional drone light show display"
                   className="w-full h-full object-cover"
                 />
               </div>
