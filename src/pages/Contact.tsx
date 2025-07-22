@@ -251,6 +251,15 @@ export default function Contact() {
                   </Button>
                 </form>
               </Card>
+              
+              {/* Contact Image */}
+              <div className="mt-8">
+                <img 
+                  src={contactBanner} 
+                  alt="Contact FLYBIT Dynamics - Professional drone show consultation" 
+                  className="w-full h-64 object-cover rounded-lg shadow-lg"
+                />
+              </div>
             </div>
 
             {/* Contact Information */}
