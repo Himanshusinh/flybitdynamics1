@@ -4,13 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Building2, Flag, Rocket, Church, Trophy, ArrowRight, Zap, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
-import servicesBanner from "@/assets/services-banner.jpg";
-import serviceSocial from "@/assets/service-social.jpg";
-import serviceCorporate from "@/assets/service-corporate.jpg";
-import serviceGovernment from "@/assets/service-government.jpg";
-import serviceProduct from "@/assets/service-product.jpg";
-import serviceSpiritual from "@/assets/service-spiritual.jpg";
-import serviceSports from "@/assets/service-sports.jpg";
+import servicesBanner from "@/assets/services/ChatGPT Image Jul 25, 2025, 02_23_36 PM.png";
+import serviceSocial from "@/assets/services/ChatGPT Image Jul 25, 2025, 04_28_51 PM.png";
+import serviceCorporate from "@/assets/services/ChatGPT Image Jul 25, 2025, 04_37_47 PM.png";
+import serviceGovernment from "@/assets/services/ChatGPT Image Jul 25, 2025, 05_18_40 PM.png";
+import serviceProduct from "@/assets/services/freepik_edit (7).jpeg";
+import serviceSpiritual from "@/assets/services/ChatGPT Image Jul 26, 2025, 12_37_48 PM.png";
+import serviceSports from "@/assets/services/ChatGPT Image Jul 25, 2025, 05_24_31 PM.png";
 
 const services = [
   {
@@ -201,9 +201,8 @@ export default function Services() {
                     </Badge>
                   </div>
                 </div>
-
                 {/* Service Image */}
-                <div className="w-full h-48 rounded-lg overflow-hidden mb-6">
+                <div className="w-full h-[600px] rounded-lg overflow-hidden mb-6">
                   <img 
                     src={service.image} 
                     alt={`${service.title} drone light show`}

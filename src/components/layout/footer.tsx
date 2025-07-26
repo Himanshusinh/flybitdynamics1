@@ -56,7 +56,7 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>51.1 Satyamev Eminence, Science City Road, Sola, Ahmedabad 380060</span>
+                <span>511 Satyamev Eminence, Science City Road, Sola, Ahmedabad 380060</span>
               </div>
             </div>
           </div>
