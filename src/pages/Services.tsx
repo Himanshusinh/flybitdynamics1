@@ -202,7 +202,7 @@ export default function Services() {
                   </div>
                 </div>
                 {/* Service Image */}
-                <div className="w-full h-[600px] rounded-lg overflow-hidden mb-6">
+                <div className="w-full h-48 rounded-lg overflow-hidden mb-6">
                   <img 
                     src={service.image} 
                     alt={`${service.title} drone light show`}
