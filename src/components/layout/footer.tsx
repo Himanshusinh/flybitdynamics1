@@ -43,7 +43,7 @@ export function Footer() {
               <img src="/lovable-uploads/32653dea-0b30-472d-83b7-4682377a49ba.png" alt="FLYBIT Dynamics" className="h-10 w-auto" />
             </Link>
             <p className="text-secondary-foreground/80 mb-6 max-w-md">
-              Where Wonder Begins. We are storytellers of the sky, creating magical drone light shows that transform your special moments into unforgettable experiences.
+              We are storytellers of the sky, creating magical drone light shows that transform your special moments into unforgettable experiences.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">

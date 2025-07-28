@@ -243,7 +243,7 @@ export default function Technology() {
               </Button>
             </div>
 
-            <Card className="p-8 card-gradient">
+            {/* <Card className="p-8 card-gradient">
               <h3 className="text-2xl font-bold mb-6 text-center">Certifications & Compliance</h3>
               <div className="space-y-4">
                 {certifications.map((cert, idx) => (
@@ -255,7 +255,7 @@ export default function Technology() {
                   </div>
                 ))}
               </div>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </section>
@@ -271,18 +271,18 @@ export default function Technology() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-4xl font-bold text-primary mb-2">5000+</div>
               <div className="text-sm text-muted-foreground">Max Drones per Show</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-accent mb-2">±2cm</div>
+              <div className="text-4xl font-bold text-accent mb-2">±1cm</div>
               <div className="text-sm text-muted-foreground">Positioning Accuracy</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
               <div className="text-4xl font-bold text-purple-500 mb-2">25min</div>
-              <div className="text-sm text-muted-foreground">Flight Time per Drone</div>
+              <div className="text-sm text-muted-foreground">Flight time per show</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">

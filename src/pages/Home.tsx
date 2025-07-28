@@ -29,15 +29,14 @@ const highlights = [
   {
     icon: Rocket,
     title: "Eco-Friendly & Safe",
-    description: "Spectacular shows with zero environmental impact"
+    description: "Spectacular shows with minimal environmental impact"
   }
 ];
 
 const stats = [
   { number: "500+", label: "Drones in Fleet" },
-  { number: "100+", label: "Shows Completed" },
   { number: "50+", label: "Cities Covered" },
-  { number: "24/7", label: "Support Available" }
+
 ];
 
 const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
@@ -168,7 +167,7 @@ export default function Home() {
               {
                 title: "Social Events",
                 description: "Because love deserves to be written in the stars.",
-                features: ["Custom initials", "Love stories in the sky", "Magical moments"]
+                features: ["engagement/Weding", "birthdays", "Magical moments"]
               },
               {
                 title: "Corporate Events", 
@@ -178,7 +177,7 @@ export default function Home() {
               {
                 title: "Government Events",
                 description: "A new age of patriotic storytelling.",
-                features: ["National celebrations", "Cultural showcases", "G20 events"]
+                features: ["National celebrations", "Cultural showcases", "Multi National Events"]
               }
             ].map((service, index) => (
               <Card key={index} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">

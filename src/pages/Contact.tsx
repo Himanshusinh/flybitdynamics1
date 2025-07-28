@@ -314,7 +314,7 @@ export default function Contact() {
 
               {/* Social Media */}
               <Card className="p-6 card-gradient">
-                <h3 className="text-xl font-semibold mb-4">Follow Our Journey</h3>
+                <h3 className="text-xl font-semibold mb-4">Follow Us on Socail Media</h3>
                 <div className="space-y-3">
                   {socialLinks.map((social) => (
                     <a
@@ -326,7 +326,7 @@ export default function Contact() {
                         <social.icon className="w-5 h-5 text-primary" />
                         <span className="font-medium">{social.name}</span>
                       </div>
-                      <span className="text-sm text-muted-foreground">{social.followers}</span>
+                      {/* <span className="text-sm text-muted-foreground">{social.followers}</span> */}
                     </a>
                   ))}
                 </div>

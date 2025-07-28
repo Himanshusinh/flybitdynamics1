@@ -196,9 +196,9 @@ export default function Services() {
                     <p className="text-muted-foreground italic mb-3">
                       "{service.subtitle}"
                     </p>
-                    <Badge variant="secondary" className="mb-4">
+                    {/* <Badge variant="secondary" className="mb-4">
                       {service.pricing}
-                    </Badge>
+                    </Badge> */}
                   </div>
                 </div>
                 {/* Service Image */}
