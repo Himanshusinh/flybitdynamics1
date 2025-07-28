@@ -72,7 +72,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Where Wonder <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Begins</span>
+            Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform your event with breathtaking drone light shows powered by cutting-edge technology and unforgettable creativity.
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              One Technology. <span className="text-accent">Infinite Possibilities.</span>
+              One Technology. <span className="text-accent text-[#f5a30a] ">Infinite Possibilities.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From intimate weddings to grand corporate events, we bring your vision to life in the night sky.

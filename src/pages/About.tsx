@@ -103,7 +103,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">FLYBIT Dynamics</span>
+              About <span className="text-transparent bg-clip-text text-[#f5a30a]">FLYBIT Dynamics</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
               We believe in the power of light, movement, and technology to create magic. From a spark of inspiration to sky-filling animations, our drone light shows are crafted with precision and passion.
@@ -160,7 +160,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-accent">Values</span>
+              Our <span className="text-accent text-[#f5a30a]">Values</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The principles that guide every decision, every show, and every moment we create.
@@ -218,7 +218,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Meet Our <span className="text-accent">Leadership</span>
+              Meet Our <span className="text-accent text-[#f5a30a]">Leadership</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The visionaries and innovators behind every spectacular show.

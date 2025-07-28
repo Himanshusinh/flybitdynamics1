@@ -212,7 +212,7 @@ export default function Blog() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Stories from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Sky</span>
+            Stories from the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Sky</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             Insights, inspiration, and behind-the-scenes stories from the world of drone light shows. Discover the magic that happens when technology meets creativity.
@@ -325,7 +325,7 @@ export default function Blog() {
             {/* Recent Posts */}
             <div className="lg:col-span-3">
               <h2 className="text-4xl font-bold mb-8">
-                Recent <span className="text-accent">Articles</span>
+                Recent <span className="text-accent text-[#f5a30a]">Articles</span>
               </h2>
               
               <div className="space-y-8">

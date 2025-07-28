@@ -170,7 +170,7 @@ export default function Services() {
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#f5a30a]">
             One Technology. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Infinite Possibilities.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
@@ -270,7 +270,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our <span className="text-accent">Services</span>
+              Why Choose Our <span className="text-accent text-[#f5a30a]">Services</span>
             </h2>
           </div>
 
