@@ -1,16 +1,25 @@
-import { useEffect } from "react";
+'use client';
+
+
+import { useState,useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Building2, Flag, Rocket, Church, Trophy, ArrowRight, Zap, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
-import servicesBanner from "@/assets/services/ChatGPT Image Jul 25, 2025, 02_23_36 PM.png";
-import serviceSocial from "@/assets/services/ChatGPT Image Jul 25, 2025, 04_28_51 PM.png";
-import serviceCorporate from "@/assets/services/ChatGPT Image Jul 25, 2025, 04_37_47 PM.png";
-import serviceGovernment from "@/assets/services/ChatGPT Image Jul 25, 2025, 05_18_40 PM.png";
-import serviceProduct from "@/assets/services/freepik_edit (7).jpeg";
-import serviceSpiritual from "@/assets/services/ChatGPT Image Jul 26, 2025, 12_37_48 PM.png";
-import serviceSports from "@/assets/services/ChatGPT Image Jul 25, 2025, 05_24_31 PM.png";
+import serviceSocial1 from "@/assets/services/social-sevices-01.png";
+import serviceSocial2 from "@/assets/services/social-sevices-02.png";
+import serviceSocial3 from "@/assets/services/corporate-events-01.png";
+import serviceSocial4 from "@/assets/services/corporate-events-02.png";
+import serviceSocial5 from "@/assets/services/govt-and-national-events.png";
+import serviceSocial6 from "@/assets/services/govt-and-national-events-02.png";
+import serviceSocial7 from "@/assets/services/products-launches-01.png";
+import serviceSocial8 from "@/assets/services/products-launches-02.png";
+import serviceSocial9 from "@/assets/services/spiritual-gathering-01.png";
+import serviceSocial10 from "@/assets/services/spiritual-gathering-02.png";
+import serviceSocial11 from "@/assets/services/sports-and-entertainment-01.png";
+import serviceSocial12 from "@/assets/services/sports-and-entertainment-02.png";
+import servicesBanner from "@/assets/services-banner.jpg";
 
 const services = [
   {
@@ -30,7 +39,7 @@ const services = [
     pricing: "Starting from ₹1,50,000",
     color: "text-pink-500",
     bgColor: "bg-pink-500/10",
-    image: serviceSocial
+    image: [serviceSocial1, serviceSocial2]
   },
   {
     id: "corporate",
@@ -49,7 +58,7 @@ const services = [
     pricing: "Starting from ₹3,00,000",
     color: "text-blue-500",
     bgColor: "bg-blue-500/10",
-    image: serviceCorporate
+    image: [serviceSocial3, serviceSocial4]
   },
   {
     id: "government",
@@ -68,7 +77,7 @@ const services = [
     pricing: "Custom pricing available",
     color: "text-orange-500",
     bgColor: "bg-orange-500/10",
-    image: serviceGovernment
+    image: [serviceSocial5, serviceSocial6]
   },
   {
     id: "product",
@@ -87,7 +96,7 @@ const services = [
     pricing: "Starting from ₹2,50,000",
     color: "text-purple-500",
     bgColor: "bg-purple-500/10",
-    image: serviceProduct
+    image: [serviceSocial7, serviceSocial8]
   },
   {
     id: "spiritual",
@@ -106,7 +115,7 @@ const services = [
     pricing: "Starting from ₹2,00,000",
     color: "text-yellow-500",
     bgColor: "bg-yellow-500/10",
-    image: serviceSpiritual
+    image: [serviceSocial9, serviceSocial10]
   },
   {
     id: "sports",
@@ -125,7 +134,7 @@ const services = [
     pricing: "Starting from ₹4,00,000",
     color: "text-primary",
     bgColor: "bg-primary/10",
-    image: serviceSports
+    image: [serviceSocial11, serviceSocial12]
   }
 ];
 
@@ -153,6 +162,21 @@ const processSteps = [
 ];
 
 export default function Services() {
+  const [imageIndexes, setImageIndexes] = useState(
+    Array(services.length).fill(0)
+  );
+
+  // 🔁 Switch image every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setImageIndexes(prev =>
+        prev.map(index => (index === 0 ? 1 : 0))
+      );
+    }, 5000); // every 5s
+    return () => clearInterval(interval);
+  }, []);
+
+  // 🟢 Set SEO metadata on mount
   useEffect(() => {
     document.title = "Drone Light Show Services India | Wedding & Corporate Events - FLYBIT Dynamics";
     document.querySelector('meta[name="description"]')?.setAttribute('content', 'Professional drone light show services in India. Wedding shows, corporate events, product launches, spiritual gatherings. Custom aerial displays by FLYBIT Dynamics.');
@@ -183,52 +207,48 @@ export default function Services() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <Card key={service.id} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <service.icon className={`w-8 h-8 ${service.color}`} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground italic mb-3">
-                      "{service.subtitle}"
-                    </p>
-                    {/* <Badge variant="secondary" className="mb-4">
-                      {service.pricing}
-                    </Badge> */}
-                  </div>
-                </div>
-                {/* Service Image */}
-                <div className="w-full h-48 rounded-lg overflow-hidden mb-6">
-                  <img 
-                    src={service.image} 
-                    alt={`${service.title} drone light show`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                
-                <p className="text-muted-foreground mb-6">
-                  {service.description}
-                </p>
+           {services.map((service, index) => (
+  <Card key={service.id} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+    <div className="flex items-start space-x-4 mb-6">
+      <div className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+        <service.icon className={`w-8 h-8 ${service.color}`} />
+      </div>
+      <div className="flex-1">
+        <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+          {service.title}
+        </h3>
+        <p className="text-muted-foreground italic mb-3">
+          "{service.subtitle}"
+        </p>
+      </div>
+    </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm">
-                      <Zap className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
+    {/* 🔄 Image that changes every 5s */}
+    <div className="w-full h-48 rounded-lg overflow-hidden mb-6 group">
+      <img 
+        src={service.image[imageIndexes[index]]} 
+        alt={`${service.title} drone light show`}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+    </div>
 
-                <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  Get Quote for {service.title}
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Card>
-            ))}
+    <p className="text-muted-foreground mb-6">{service.description}</p>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+      {service.features.map((feature, idx) => (
+        <div key={idx} className="flex items-center text-sm">
+          <Zap className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
+          <span>{feature}</span>
+        </div>
+      ))}
+    </div>
+
+    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+      Get Quote for {service.title}
+      <ArrowRight className="ml-2 w-4 h-4" />
+    </Button>
+  </Card>
+))}
           </div>
         </div>
       </section>

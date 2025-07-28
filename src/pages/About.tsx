@@ -58,28 +58,28 @@ const achievements = [
 
 const team = [
   {
-    name: "Rajesh Kumar",
-    role: "Founder & CEO",
-    description: "Aerospace engineer with 15+ years in drone technology",
-    image: teamMember1
+    name: "",
+    role: "",
+    description: "",
+    // image: teamMember1
   },
   {
-    name: "Priya Sharma",
-    role: "Creative Director",
-    description: "Visual artist specializing in large-scale light installations",
-    image: teamMember2
+    name: "",
+    role: "",
+    description: "",
+    // image: teamMember2
   },
   {
-    name: "Dr. Amit Patel",
-    role: "Technical Lead",
-    description: "PhD in Robotics with expertise in swarm intelligence",
-    image: teamMember3
+    name: "",
+    role: "",
+    description: "",
+    // image: teamMember3
   },
   {
-    name: "Kavya Reddy",
-    role: "Operations Manager",
-    description: "Project management expert with 10+ years in event planning",
-    image: teamMember4
+    name: "",
+    role: "",
+    description: "",
+    // image: teamMember4
   }
 ];
 
@@ -121,18 +121,34 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                Our <span className="text-primary">Journey</span>
+                Our <span className="text-primary">vision</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
-                  FLYBIT Dynamics was born from a simple yet powerful vision: to transform the way we celebrate life's most precious moments. Founded in 2020 by a team of aerospace engineers and creative visionaries, we set out to revolutionize the entertainment industry through cutting-edge drone technology.
+                  At FlyBit, our vision is to redefine the future of entertainment through cutting-edge drone light shows that captivate, inspire, and innovate. We aim to replace traditional fireworks with eco-friendly, safer, and more mesmerizing aerial displays powered by precision drone technology.
                 </p>
                 <p>
-                  What started as a small team of passionate innovators has grown into India's premier drone light show company. We've had the privilege of lighting up the skies for weddings, corporate events, government celebrations, and cultural festivals across the nation.
+                 We believe the sky is not the limit—it's our canvas. Whether it’s for cultural festivals, brand activations, corporate events, weddings, or national celebrations, our synchronized drone formations are designed to create unforgettable visual experiences that tell stories, evoke emotion, and leave lasting impressions.
                 </p>
+               
                 <p>
-                  Our journey is marked by countless magical moments - from intimate wedding proposals written in the stars to grand corporate launches that redefined brand storytelling. Each show has taught us something new about the power of technology to touch hearts and create lasting memories.
+                  As a new-age drone show company, we are committed to:
                 </p>
+                <ul >
+                   <li>
+                  1. Pushing the boundaries of aerial artistry
+                </li>
+                <li>
+                  2. Delivering immersive storytelling with technology
+                </li>
+                <li>
+                  3. Making sustainable entertainment accessible across the globe
+                </li>
+                <li>
+                 4. We envision a world where drone shows become the heart of modern celebrations, lighting up the skies with creativity, innovation, and purpose.
+                </li>
+                </ul>
+               
               </div>
             </div>
             <div className="relative">
