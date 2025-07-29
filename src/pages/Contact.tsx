@@ -155,7 +155,7 @@ export default function Contact() {
       <section 
         className="py-20 text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${contactBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${contactBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

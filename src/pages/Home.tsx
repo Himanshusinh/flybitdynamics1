@@ -83,7 +83,7 @@ export default function Home() {
                   : 'translate-x-full opacity-0'
               }`}
               style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(${image})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(${image})`,
               }}
             />
           ))}
@@ -122,7 +122,8 @@ export default function Home() {
           <ArrowRight className="w-6 h-6" />
         </button>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <p className="text-white text-3xl leading-tight font-bold">Flybit Dynamics</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
             Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">

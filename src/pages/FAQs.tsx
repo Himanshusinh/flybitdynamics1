@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import faqBanner from "@/assets/b3.jpg";
+import faqBanner from "@/assets/b4.jpg";
 import { 
   Accordion,
   AccordionContent,
@@ -112,7 +112,7 @@ export default function FAQs() {
       <section 
         className="py-20 text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${faqBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${faqBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

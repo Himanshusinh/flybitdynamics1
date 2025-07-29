@@ -212,13 +212,13 @@ export default function Services() {
       <section
         className="py-20 text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${servicesBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${servicesBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#f5a30a]">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 ">
             One Technology. <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Infinite Possibilities.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">

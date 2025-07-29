@@ -95,13 +95,13 @@ export default function About() {
       <section 
         className="py-20 text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(${aboutBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${aboutBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center ml-72">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               About <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">FLYBIT Dynamics</span>
             </h1>
@@ -121,7 +121,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                Our <span className="text-primary">vision</span>
+                Our <span className="text-primary">Vision</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>

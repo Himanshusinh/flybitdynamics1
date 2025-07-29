@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import technologyBanner from "@/assets/b3.jpg";
+import technologyBanner from "@/assets/b7.jpg";
 import technologyImage from "@/assets/technology/technology.jpg";
 import { 
   Cpu, 
@@ -122,7 +122,7 @@ export default function Technology() {
       <section 
         className="py-20 text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${technologyBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${technologyBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
