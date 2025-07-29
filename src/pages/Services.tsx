@@ -219,7 +219,7 @@ export default function Services() {
       >
         <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#f5a30a]">
-            One Technology. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Infinite Possibilities.</span>
+            One Technology. <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Infinite Possibilities.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             From intimate celebrations to grand spectacles, we transform your vision into breathtaking aerial experiences that leave lasting impressions.
