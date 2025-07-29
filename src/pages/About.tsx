@@ -267,7 +267,7 @@ export default function About() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-20 hero-gradient text-white">
+      <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Our Mission

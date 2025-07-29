@@ -200,7 +200,7 @@ export default function Contact() {
                         <SelectTrigger className="mt-2">
                           <SelectValue placeholder="Select event type" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="hover:[#f5a30a]">
                           {eventTypes.map((type) => (
                             <SelectItem key={type} value={type}>
                               {type}
@@ -393,7 +393,7 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-700 text-white">
+      <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Create Magic?

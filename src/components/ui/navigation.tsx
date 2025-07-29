@@ -24,7 +24,7 @@ const navigation = [
   // },
   { name: "Technology", href: "/technology" },
   { name: "FAQs", href: "/faqs" },
-  { name: "Blog", href: "/blog" },
+  // { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ];
 
