@@ -406,7 +406,7 @@ export default function Contact() {
             <div className="absolute top-4 left-4 bg-background/95 p-4 rounded-lg shadow-lg max-w-sm">
               <h3 className="text-xl font-semibold mb-2 flex items-center">
                 <MapPin className="w-5 h-5 text-primary mr-2" />
-                Visit Us
+                  Flybit Dynamics Pvt Ltd
               </h3>
               <p className="text-muted-foreground text-sm mb-3">
                 51.1 Satyamev Eminence, Science City Road<br />

@@ -101,7 +101,7 @@ export default function About() {
         }}
       >
         <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center ml-72">
+          <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               About <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">FLYBIT Dynamics</span>
             </h1>
