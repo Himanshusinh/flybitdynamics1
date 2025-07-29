@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import faqBanner from "@/assets/b5.jpg";
+import faqBanner from "@/assets/b3.jpg";
 import { 
   Accordion,
   AccordionContent,
@@ -135,9 +135,9 @@ export default function FAQs() {
             {faqCategories.map((category, index) => (
               <Button
                 key={index}
-                variant={selectedCategory === index ? "default" : "outline"}
+                
                 onClick={() => setSelectedCategory(index)}
-                className="transition-all duration-300"
+                className="transition-all duration-300 bg-white text-black border border-[#e4e6eb] hover:text-white "
               >
                 {category.title}
               </Button>
@@ -185,8 +185,12 @@ export default function FAQs() {
               <p className="text-muted-foreground mb-4">
                 Speak directly with our experts for immediate assistance.
               </p>
-              <Button variant="outline" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                +91 98765 43210
+              <Button 
+                variant="outline" 
+                className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                onClick={() => window.location.href = "tel:+919664612798"}
+              >
+                +91 9664612798
               </Button>
             </Card>
 
@@ -196,7 +200,10 @@ export default function FAQs() {
               <p className="text-muted-foreground mb-4">
                 Quick responses to your questions via WhatsApp.
               </p>
-              <Button variant="outline" className="group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+              <Button 
+                className="bg-white text-black border border-[#e4e6eb] hover:text-white"
+                onClick={() => window.open('https://wa.me/919664612798?text=Hi! I have some questions about your drone light show services.', '_blank')}
+              >
                 Start Chat
               </Button>
             </Card>
@@ -207,7 +214,11 @@ export default function FAQs() {
               <p className="text-muted-foreground mb-4">
                 Detailed responses within 24 hours.
               </p>
-              <Button variant="outline" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <Button 
+                variant="outline" 
+                className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                onClick={() => window.location.href = "mailto:info@flybitdynamics.com?subject=Question about Drone Light Show Services"}
+              >
                 Send Email
               </Button>
             </Card>
@@ -230,7 +241,7 @@ export default function FAQs() {
                 Schedule Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4">
+            <Button size="lg" className="text-lg px-8 py-4 bg-white text-black border border-[#e4e6eb] hover:text-white ">
               Download FAQ Guide
             </Button>
           </div>

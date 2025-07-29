@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import technologyBanner from "@/assets/b3.jpg";
-import technologyImage from "@/assets/technology.jpg";
+import technologyImage from "@/assets/technology/technology.jpg";
 import { 
   Cpu, 
   Satellite, 
@@ -263,7 +263,7 @@ export default function Technology() {
             <div className="relative group">
               <div className="overflow-hidden rounded-lg shadow-xl">
                 <img 
-                  src="src/assets/technology/technology.jpg"
+                  src={technologyImage}
                   alt="Advanced Drone Technology and Safety Systems"
                   className="w-full h-[370px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />

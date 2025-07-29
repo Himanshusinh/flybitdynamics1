@@ -99,25 +99,54 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for your interest. We'll get back to you within 24 hours.",
-    });
     
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      eventType: "",
-      eventDate: "",
-      city: "",
-      message: ""
-    });
+    try {
+      const submissionTime = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+      
+      // Data to be sent
+      const formDataWithTime = {
+        ...formData,
+        submissionTime,
+      };
+
+      // Send to Google Sheets
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyQUhzE9XTV7klLmqjHf59gmRHQo5cFd0FbO3Lus6H11FURI8QGIWiN3H5I2NBdnbnM/exec', {
+        method: 'POST',
+        mode: 'no-cors', // Important for CORS handling
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataWithTime)
+      });
+
+      // Data has been sent to Google Sheets
+
+      toast({
+        title: "Message Sent Successfully!",
+        description: "Thank you for your interest. We'll get back to you within 24 hours.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        eventType: "",
+        eventDate: "",
+        city: "",
+        message: ""
+      });
+
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast({
+        title: "Error",
+        description: "There was an error submitting your message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -200,9 +229,13 @@ export default function Contact() {
                         <SelectTrigger className="mt-2">
                           <SelectValue placeholder="Select event type" />
                         </SelectTrigger>
-                        <SelectContent className="hover:[#f5a30a]">
+                        <SelectContent>
                           {eventTypes.map((type) => (
-                            <SelectItem key={type} value={type}>
+                            <SelectItem 
+                              key={type} 
+                              value={type}
+                              className="hover:bg-[#f5a30a] hover:text-white focus:bg-[#f5a30a] focus:text-white cursor-pointer"
+                            >
                               {type}
                             </SelectItem>
                           ))}
@@ -289,9 +322,8 @@ export default function Contact() {
                         <Button 
                           // variant="outline" 
                           size="sm" 
-                          className="mt-3"
+                          className="mt-3 hover:[#f5a30a] bg-white text-black border border-[#e4e6eb] hover:border-white"
                           onClick={info.onClick}
-                          className="hover:[#f5a30a] bg-white text-black border border-[#e4e6eb] hover:border-white"
                         >
                           {info.action}
                         </Button>
