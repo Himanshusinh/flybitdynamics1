@@ -130,7 +130,7 @@ export function Footer() {
               ))}
             </div>
             <p className="text-secondary-foreground/60 text-sm">
-              © 2024 FLYBIT Dynamics. All rights reserved.
+              © 2024 Flybit Dynamics. All rights reserved.
             </p>
           </div>
         </div>

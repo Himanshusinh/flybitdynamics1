@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import contactBanner from "@/assets/b8.jpg";
+import  contactimag from "@/assets/contact/contact.jpg";
 import { 
   Phone, 
   Mail, 
@@ -259,7 +260,7 @@ export default function Contact() {
               {/* Contact Image */}
               <div className="mt-8">
                 <img 
-                  src="src/assets/contact/contact.jpg"
+                  src={contactimag}
                   alt="Contact FLYBIT Dynamics - Professional drone show consultation" 
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                 />
@@ -392,7 +393,7 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 hero-gradient text-white">
+      <section className="py-20 bg-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Ready to Create Magic?

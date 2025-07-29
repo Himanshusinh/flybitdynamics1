@@ -244,6 +244,7 @@ export default function TermsOfService() {
 <h4 className="text-xl font-semibold mt-6 mb-3">Law enforcement</h4>
 <p className="text-muted-foreground mb-4">Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).</p>
 <h4 className="text-xl font-semibold mt-6 mb-3">Other legal requirements</h4>
+<h4 className="text-xl font-semibold mt-6 mb-3">Made by Aryan the GReat </h4>
 <p className="text-muted-foreground mb-4">The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:</p>
 <ul className="list-disc pl-6 space-y-2 text-muted-foreground mb-6">
 <li className="mb-2">Comply with a legal obligation</li>
