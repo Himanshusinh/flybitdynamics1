@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import contactBanner from "@/assets/contact-banner.jpg";
+import contactBanner from "@/assets/b8.jpg";
 import { 
   Phone, 
   Mail, 
@@ -25,25 +25,29 @@ const contactInfo = [
     icon: Phone,
     title: "Phone",
     details: ["+91 9664612798"],
-    action: "Call Now"
+    action: "Call Now",
+    onClick: () => window.location.href = "tel:+919664612798"
   },
   {
     icon: Mail,
     title: "Email",
     details: ["info@flybitdynamics.com"],
-    action: "Send Email"
+    action: "Send Email",
+    onClick: () => window.location.href = "mailto:info@flybitdynamics.com?subject=Enquiry for Drone Light Show"
   },
   {
     icon: MapPin,
     title: "Location",
     details: ["51.1 Satyamev Eminence, Science City Road", "Sola, Ahmedabad 380060"],
-    action: "Get Directions"
+    action: "Get Directions",
+    onClick: () => window.open("https://maps.app.goo.gl/rDX4KkEGiytgmHaV6", "_blank")
   },
   {
     icon: Clock,
     title: "Working Hours",
     details: ["Mon - Sat: 9:00 AM - 7:00 PM", "Sun: 10:00 AM - 5:00 PM"],
-    action: "Schedule Call"
+    action: "Schedule Call",
+    onClick: () => window.open("https://calendly.com/your-scheduling-link", "_blank")
   }
 ];
 
@@ -126,9 +130,9 @@ export default function Contact() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Let's Light Up the Sky <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Together!</span>
+            Let's Light Up the Sky <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Together!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             Ready to create an unforgettable experience? Tell us your vision and we'll make it happen in the night sky.
@@ -255,7 +259,7 @@ export default function Contact() {
               {/* Contact Image */}
               <div className="mt-8">
                 <img 
-                  src={contactBanner} 
+                  src="src/assets/contact/contact.jpg"
                   alt="Contact FLYBIT Dynamics - Professional drone show consultation" 
                   className="w-full h-64 object-cover rounded-lg shadow-lg"
                 />
@@ -265,7 +269,7 @@ export default function Contact() {
             {/* Contact Information */}
             <div>
               <h2 className="text-4xl font-bold mb-8">
-                Get in <span className="text-accent text-[#f5a30a]">Touch</span>
+                Get in <span className=" text-[#f5a30a]">Touch</span>
               </h2>
               
               <div className="space-y-6 mb-8">
@@ -275,12 +279,19 @@ export default function Contact() {
                       <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                         <info.icon className="w-6 h-6 text-primary" />
                       </div>
+                      
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
                         {info.details.map((detail, idx) => (
                           <p key={idx} className="text-muted-foreground">{detail}</p>
                         ))}
-                        <Button variant="outline" size="sm" className="mt-3">
+                        <Button 
+                          // variant="outline" 
+                          size="sm" 
+                          className="mt-3"
+                          onClick={info.onClick}
+                          className="hover:[#f5a30a] bg-white text-black border border-[#e4e6eb] hover:border-white"
+                        >
                           {info.action}
                         </Button>
                       </div>
@@ -290,7 +301,7 @@ export default function Contact() {
               </div>
 
               {/* Quick Actions */}
-              <Card className="p-6 card-gradient mb-8">
+              {/* <Card className="p-6 card-gradient mb-8">
                 <h3 className="text-xl font-semibold mb-4">Quick Actions</h3>
                 <div className="space-y-3">
                   <Button 
@@ -310,7 +321,7 @@ export default function Contact() {
                     Request Quote
                   </Button>
                 </div>
-              </Card>
+              </Card> */}
 
               {/* Social Media */}
               <Card className="p-6 card-gradient">
@@ -348,12 +359,31 @@ export default function Contact() {
             </p>
           </div>
           
-          <Card className="h-96 bg-muted/50 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Interactive Map</h3>
-              <p className="text-muted-foreground">Google Maps integration would be implemented here</p>
-              <Button className="mt-4">
+          <Card className="h-96 overflow-hidden relative">
+            {/* Replace the src URL with your Google Maps embed URL */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3670.692218722387!2d72.51215387547481!3d23.071742779139342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84892b5ae783%3A0x84cd0b6497653de5!2sWildChild%20Studios!5e0!3m2!1sen!2sin!4v1753772330053!5m2!1sen!2sin"
+              className="w-full h-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            
+            {/* Overlay with contact details */}
+            <div className="absolute top-4 left-4 bg-background/95 p-4 rounded-lg shadow-lg max-w-sm">
+              <h3 className="text-xl font-semibold mb-2 flex items-center">
+                <MapPin className="w-5 h-5 text-primary mr-2" />
+                Visit Us
+              </h3>
+              <p className="text-muted-foreground text-sm mb-3">
+                51.1 Satyamev Eminence, Science City Road<br />
+                Sola, Ahmedabad 380060
+              </p>
+              <Button 
+                size="sm"
+                onClick={() => window.open('https://maps.app.goo.gl/rDX4KkEGiytgmHaV6', '_blank')}
+                className="w-full"
+              >
                 Get Directions
               </Button>
             </div>
@@ -371,7 +401,12 @@ export default function Contact() {
             Join hundreds of satisfied clients who have made their events unforgettable with FLYBIT Dynamics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="text-lg px-8 py-4"
+              onClick={() => window.location.href = "tel:+919664612798"}
+            >
               <Phone className="mr-2 w-5 h-5" />
               Call Now: +91 9664612798
             </Button>

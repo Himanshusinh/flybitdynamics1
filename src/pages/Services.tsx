@@ -1,7 +1,7 @@
 'use client';
 
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -19,7 +19,7 @@ import serviceSocial9 from "@/assets/services/spiritual-gathering-01.png";
 import serviceSocial10 from "@/assets/services/spiritual-gathering-02.png";
 import serviceSocial11 from "@/assets/services/sports-and-entertainment-01.png";
 import serviceSocial12 from "@/assets/services/sports-and-entertainment-02.png";
-import servicesBanner from "@/assets/services-banner.jpg";
+import servicesBanner from "@/assets/b2.jpg";
 
 const services = [
   {
@@ -29,7 +29,7 @@ const services = [
     subtitle: "Because love deserves to be written in the stars.",
     description: "Transform your most precious moments into magical experiences that will be remembered for generations.",
     features: [
-      "Custom initials and names in the sky",
+      "Custom names in the sky",
       "Love story animations",
       "Wedding proposal shows",
       "Anniversary celebrations",
@@ -141,23 +141,38 @@ const services = [
 const processSteps = [
   {
     step: "01",
-    title: "Consultation",
-    description: "We understand your vision, requirements, and event details to create a customized show concept."
+    title: "Concept & Storyboarding",
+    description: "21 Days before the event"
   },
   {
-    step: "02", 
-    title: "Design & Planning",
-    description: "Our creative team designs the choreography, selects music, and plans the technical execution."
+    step: "02",
+    title: "3D Animation & Simulation",
+    description: "15 Days before the event"
   },
   {
     step: "03",
-    title: "Simulation",
-    description: "We create detailed 3D simulations for your approval before the actual performance."
+    title: "Flight Path Programming",
+    description: "12 Days before the event"
   },
   {
     step: "04",
-    title: "Execution",
-    description: "Our expert team manages setup, safety protocols, and delivers a flawless performance."
+    title: "Drone Preparation & Testing",
+    description: "12 Days before the event"
+  },
+  {
+    step: "05",
+    title: "Safety & Permissions",
+    description: "6 Days before the event"
+  },
+  {
+    step: "06",
+    title: "Rehearsals",
+    description: "1-2 Days before the event"
+  },
+  {
+    step: "07",
+    title: "Final Show Execution",
+    description: ""
   }
 ];
 
@@ -166,7 +181,16 @@ export default function Services() {
     Array(services.length).fill(0)
   );
 
-  // 🔁 Switch image every 5 seconds
+  // Handle manual image navigation
+  const handleImageChange = (serviceIndex: number, newIndex: number) => {
+    setImageIndexes(prev => {
+      const newIndexes = [...prev];
+      newIndexes[serviceIndex] = newIndex;
+      return newIndexes;
+    });
+  };
+
+  // 🔁 Switch image every 5 seconds with animation
   useEffect(() => {
     const interval = setInterval(() => {
       setImageIndexes(prev =>
@@ -185,7 +209,7 @@ export default function Services() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section 
+      <section
         className="py-20 text-white relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${servicesBanner})`,
@@ -193,7 +217,7 @@ export default function Services() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 text-[#f5a30a]">
             One Technology. <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Infinite Possibilities.</span>
           </h1>
@@ -207,48 +231,80 @@ export default function Services() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-           {services.map((service, index) => (
-  <Card key={service.id} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-    <div className="flex items-start space-x-4 mb-6">
-      <div className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-        <service.icon className={`w-8 h-8 ${service.color}`} />
-      </div>
-      <div className="flex-1">
-        <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-          {service.title}
-        </h3>
-        <p className="text-muted-foreground italic mb-3">
-          "{service.subtitle}"
-        </p>
-      </div>
-    </div>
+            {services.map((service, index) => (
+              <Card key={service.id} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                    <service.icon className={`w-8 h-8 ${service.color}`} />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground italic mb-3">
+                      "{service.subtitle}"
+                    </p>
+                  </div>
+                </div>
 
-    {/* 🔄 Image that changes every 5s */}
-    <div className="w-full h-48 rounded-lg overflow-hidden mb-6 group">
-      <img 
-        src={service.image[imageIndexes[index]]} 
-        alt={`${service.title} drone light show`}
-        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
-    </div>
+                {/* 🔄 Image Slider with dots */}
+                <div className="relative w-full h-48 rounded-lg overflow-hidden mb-6 group">
+                  <div className="relative w-full h-full">
+                    {service.image.map((img, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className={`absolute w-full h-full transition-all duration-500 transform ${
+                          imageIndexes[index] === imgIndex 
+                          ? 'translate-x-0 opacity-100' 
+                          : imageIndexes[index] > imgIndex 
+                            ? '-translate-x-full opacity-0' 
+                            : 'translate-x-full opacity-0'
+                        }`}
+                      >
+                        <img
+                          src={img}
+                          alt={`${service.title} drone light show ${imgIndex + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* Navigation Dots */}
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                    {service.image.map((_, imgIndex) => (
+                      <button
+                        key={imgIndex}
+                        onClick={() => handleImageChange(index, imgIndex)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          imageIndexes[index] === imgIndex 
+                          ? 'bg-white scale-125' 
+                          : 'bg-white/50 hover:bg-white/75'
+                        }`}
+                        aria-label={`Show image ${imgIndex + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
 
-    <p className="text-muted-foreground mb-6">{service.description}</p>
+                <p className="text-muted-foreground mb-6">{service.description}</p>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
-      {service.features.map((feature, idx) => (
-        <div key={idx} className="flex items-center text-sm">
-          <Zap className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
-          <span>{feature}</span>
-        </div>
-      ))}
-    </div>
-
-    <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-      Get Quote for {service.title}
-      <ArrowRight className="ml-2 w-4 h-4" />
-    </Button>
-  </Card>
-))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center text-sm">
+                      <Zap className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
+                <Button className="w-full hover:[#f5a30a] bg-white text-black border border-[#e4e6eb] hover:border-white">
+                  Get Quote for {service.title}
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+                </Link>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -273,7 +329,7 @@ export default function Services() {
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground">{step.description}</p>
-                
+
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-1/2 -right-4 transform -translate-y-1/2">
                     <ArrowRight className="w-8 h-8 text-primary/30" />
@@ -290,7 +346,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose Our <span className="text-accent text-[#f5a30a]">Services</span>
+              Why Choose Our <span className=" text-[#f5a30a]">Services</span>
             </h2>
           </div>
 
@@ -332,16 +388,16 @@ export default function Services() {
             Let's discuss your vision and create a show that will leave your audience speechless.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
               <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
                 Get Custom Quote <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Link to="/contact">
+            {/* <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
               <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
                 Schedule Consultation
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

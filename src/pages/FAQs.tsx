@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import faqBanner from "@/assets/faq-banner.jpg";
+import faqBanner from "@/assets/b5.jpg";
 import { 
   Accordion,
   AccordionContent,
@@ -117,9 +117,9 @@ export default function FAQs() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Questions</span>
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Questions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             Everything you need to know about FLYBIT Dynamics drone light shows. Can't find your answer? We're here to help!

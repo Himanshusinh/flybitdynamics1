@@ -9,19 +9,19 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
-  { name: "Projects", href: "/projects" },
-  { 
-    name: "Our Projects", 
-    href: "/our-projects",
-    subMenu: [
-      { name: "Social Events", href: "/our-projects?category=social-events" },
-      { name: "Corporate Events", href: "/our-projects?category=corporate-events" },
-      { name: "Government Events", href: "/our-projects?category=government-events" },
-      { name: "Product Events", href: "/our-projects?category=product-events" },
-      { name: "Social Gathering", href: "/our-projects?category=social-gathering" },
-      { name: "Sports & Entertainment", href: "/our-projects?category=sports-entertainment" },
-    ]
-  },
+  // { name: "Projects", href: "/projects" },
+  // { 
+  //   name: "Our Projects", 
+  //   href: "/our-projects",
+  //   subMenu: [
+  //     { name: "Social Events", href: "/our-projects?category=social-events" },
+  //     { name: "Corporate Events", href: "/our-projects?category=corporate-events" },
+  //     { name: "Government Events", href: "/our-projects?category=government-events" },
+  //     { name: "Product Events", href: "/our-projects?category=product-events" },
+  //     { name: "Social Gathering", href: "/our-projects?category=social-gathering" },
+  //     { name: "Sports & Entertainment", href: "/our-projects?category=sports-entertainment" },
+  //   ]
+  // },
   { name: "Technology", href: "/technology" },
   { name: "FAQs", href: "/faqs" },
   { name: "Blog", href: "/blog" },

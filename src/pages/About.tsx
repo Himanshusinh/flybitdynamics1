@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Users, Target, Lightbulb, Award, ArrowRight, Heart, Zap, Globe } from "lucide-react";
-import aboutBanner from "@/assets/about-banner.jpg";
+import aboutBanner from "@/assets/services/b1.jpg";
 import aboutJourney from "@/assets/about-journey.jpg";
 import teamMember1 from "@/assets/team-member-1.jpg";
 import teamMember2 from "@/assets/team-member-2.jpg";
@@ -58,26 +58,26 @@ const achievements = [
 
 const team = [
   {
-    name: "",
-    role: "",
+    name: "Prateek Jain",
+    role: "CEO",
     description: "",
     // image: teamMember1
   },
   {
-    name: "",
-    role: "",
+    name: "Jehan Patel",
+    role: "CTO",
     description: "",
     // image: teamMember2
   },
   {
-    name: "",
-    role: "",
+    name: "Vivek Patel",
+    role: "Creative Director",
     description: "",
     // image: teamMember3
   },
   {
-    name: "",
-    role: "",
+    name: "Gaurav Patel",
+    role: "Director",
     description: "",
     // image: teamMember4
   }
@@ -95,15 +95,15 @@ export default function About() {
       <section 
         className="py-20 text-white relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(${aboutBanner})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(${aboutBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About <span className="text-transparent bg-clip-text text-[#f5a30a]">FLYBIT Dynamics</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">FLYBIT Dynamics</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
               We believe in the power of light, movement, and technology to create magic. From a spark of inspiration to sky-filling animations, our drone light shows are crafted with precision and passion.
@@ -134,19 +134,23 @@ export default function About() {
                 <p>
                   As a new-age drone show company, we are committed to:
                 </p>
-                <ul >
-                   <li>
-                  1. Pushing the boundaries of aerial artistry
-                </li>
-                <li>
-                  2. Delivering immersive storytelling with technology
-                </li>
-                <li>
-                  3. Making sustainable entertainment accessible across the globe
-                </li>
-                <li>
-                 4. We envision a world where drone shows become the heart of modern celebrations, lighting up the skies with creativity, innovation, and purpose.
-                </li>
+                <ul className="space-y-2 list-none">
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                    <span>Pushing the boundaries of aerial artistry</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                    <span>Delivering immersive storytelling with technology</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                    <span>Making sustainable entertainment accessible across the globe</span>
+                  </li>
+                  <li className="flex items-center space-x-2">
+                    <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0"></div>
+                    <span>Creating the future of modern celebrations with innovation and purpose</span>
+                  </li>
                 </ul>
                
               </div>
@@ -176,7 +180,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-accent text-[#f5a30a]">Values</span>
+              Our <span className=" text-[#f5a30a]">Values</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The principles that guide every decision, every show, and every moment we create.
@@ -234,7 +238,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Meet Our <span className="text-accent text-[#f5a30a]">Leadership</span>
+              Meet Our <span className=" text-[#f5a30a]">Leadership</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               The visionaries and innovators behind every spectacular show.
@@ -271,7 +275,7 @@ export default function About() {
           <p className="text-xl mb-8 opacity-90 leading-relaxed">
             To revolutionize event entertainment through innovative drone technology, creating emotionally impactful performances that bring people together, celebrate human achievements, and inspire wonder in audiences across India and beyond.
           </p>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
               Join Our Journey <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

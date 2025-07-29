@@ -387,7 +387,7 @@ export default function OurProjects() {
         }}
       >
         <div className="text-center text-white z-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
+          <h1 className="text-5xl md:text-6xl  font-bold mb-4">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Projects</span>
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto">

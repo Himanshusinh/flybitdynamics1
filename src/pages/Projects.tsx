@@ -105,9 +105,9 @@ export default function Projects() {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 hero-gradient text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-accent">Projects</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Projects</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             Discover the magic we've created across India. From intimate celebrations to grand spectacles, 

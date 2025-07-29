@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import technologyBanner from "@/assets/technology-banner.jpg";
+import technologyBanner from "@/assets/b3.jpg";
+import technologyImage from "@/assets/technology.jpg";
 import { 
   Cpu, 
   Satellite, 
@@ -30,7 +31,7 @@ const techSpecs = [
     icon: Satellite,
     title: "GPS & RTK Precision",
     description: "Centimeter-level accuracy for perfect aerial choreography",
-    specs: ["RTK GPS correction", "±2cm positioning accuracy", "Real-time tracking"]
+    specs: ["RTK GPS correction", "±1cm positioning accuracy", "Real-time tracking"]
   },
   {
     icon: Radio,
@@ -126,9 +127,9 @@ export default function Technology() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            The Brains Behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">The Beauty</span>
+            The Brains Behind <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">The Beauty</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             At the heart of every FLYBIT show lies powerful software, high-precision drones, and synchronized choreography that pushes the boundaries of what's possible.
@@ -243,6 +244,8 @@ export default function Technology() {
               </Button>
             </div>
 
+
+
             {/* <Card className="p-8 card-gradient">
               <h3 className="text-2xl font-bold mb-6 text-center">Certifications & Compliance</h3>
               <div className="space-y-4">
@@ -256,6 +259,17 @@ export default function Technology() {
                 ))}
               </div>
             </Card> */}
+            
+            <div className="relative group">
+              <div className="overflow-hidden rounded-lg shadow-xl">
+                <img 
+                  src="src/assets/technology/technology.jpg"
+                  alt="Advanced Drone Technology and Safety Systems"
+                  className="w-full h-[370px] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                
+              </div>
+            </div>
           </div>
         </div>
       </section>
