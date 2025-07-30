@@ -171,7 +171,7 @@ export default function FAQs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">
-              Still Have <span className="text-primary">Questions?</span>
+              Still Have <span className="text-[#f5a30a]">Questions?</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Our team is here to help you plan the perfect drone light show experience.

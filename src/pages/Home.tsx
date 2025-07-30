@@ -83,7 +83,7 @@ export default function Home() {
                   : 'translate-x-full opacity-0'
               }`}
               style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url(${image})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(${image})`,
               }}
             />
           ))}
@@ -121,7 +121,7 @@ export default function Home() {
         >
           <ArrowRight className="w-6 h-6" />
         </button>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-72">
           <p className="text-white text-3xl leading-tight font-bold">Flybit Dynamics</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
             Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
@@ -135,14 +135,14 @@ export default function Home() {
                 Book a Show <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button 
+            {/* <Button 
               variant="outline" 
               size="lg" 
               className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4"
             >
               <Play className="mr-2 w-5 h-5" />
               Watch Our Drones in Action
-            </Button>
+            </Button> */}
           </div>
           <p className="text-white/80 text-lg italic">
             {/* "Your moments are special. Let's make them unforgettable with a touch of sky magic." */}

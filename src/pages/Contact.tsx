@@ -43,13 +43,13 @@ const contactInfo = [
     action: "Get Directions",
     onClick: () => window.open("https://maps.app.goo.gl/rDX4KkEGiytgmHaV6", "_blank")
   },
-  {
-    icon: Clock,
-    title: "Working Hours",
-    details: ["Mon - Sat: 9:00 AM - 7:00 PM", "Sun: 10:00 AM - 5:00 PM"],
-    action: "Schedule Call",
-    onClick: () => window.open("https://calendly.com/your-scheduling-link", "_blank")
-  }
+  // {
+  //   icon: Clock,
+  //   title: "Working Hours",
+  //   details: ["Mon - Sat: 9:00 AM - 7:00 PM", "Sun: 10:00 AM - 5:00 PM"],
+  //   action: "Schedule Call",
+  //   onClick: () => window.open("https://calendly.com/your-scheduling-link", "_blank")
+  // }
 ];
 
 const eventTypes = [
@@ -177,21 +177,21 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-4xl font-bold mb-8">
-                <span className="text-[#f5a30a]">Connect</span> with us 
+                <span className="text-[#f5a30a]">Connect</span> <span className="text-[#3D473B]">With us</span>
               </h2>
               
-              <Card className="p-8 card-gradient">
+              <Card className="p-8 card-gradient text-[#3D473B]">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name" className="text-[#3D473B]">Full Name *</Label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="mt-2"
+                        className="mt-2 text-[#3D473B]"
                         placeholder="Your name"
                       />
                     </div>
@@ -283,7 +283,7 @@ export default function Contact() {
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full btn-glow text-lg">
+                  <Button type="submit" size="lg" className="w-full btn-glow text-lg bg-[#f5a30a]">
                     <Send className="mr-2 w-5 h-5" />
                     Send Message
                   </Button>
@@ -302,11 +302,9 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div>
-              <h2 className="text-4xl font-bold mb-8">
-                Get in <span className=" text-[#f5a30a]">Touch</span>
-              </h2>
-              
-              <div className="space-y-6 mb-8">
+            <h2 className="text-4xl font-bold mb-8 text-[#3D473B]">
+              Get in <span className="text-[#f5a30a]">Touch</span>
+            </h2>              <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
                   <Card key={index} className="p-6 card-gradient hover:shadow-lg transition-all duration-300 group">
                     <div className="flex items-start space-x-4">
@@ -315,14 +313,14 @@ export default function Contact() {
                       </div>
                       
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">{info.title}</h3>
+                        <h3 className="text-lg font-semibold mb-2 text-[#3D473B]">{info.title}</h3>
                         {info.details.map((detail, idx) => (
                           <p key={idx} className="text-muted-foreground">{detail}</p>
                         ))}
                         <Button 
                           // variant="outline" 
                           size="sm" 
-                          className="mt-3 hover:[#f5a30a] bg-white text-black border border-[#e4e6eb] hover:border-white"
+                          className="mt-3 hover:[#f5a30a] bg-white text-[#3D473B] border border-[#e4e6eb] hover:border-white"
                           onClick={info.onClick}
                         >
                           {info.action}
@@ -385,7 +383,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6">
-              Visit Our <span className="text-primary">Studio</span>
+              Visit Our <span className="text-[#f5a30a]">Studio</span>
             </h2>
             <p className="text-xl text-muted-foreground">
               Located in Ahmedabad, our studio is equipped with the latest drone technology and testing facilities.
@@ -403,7 +401,7 @@ export default function Contact() {
             ></iframe>
             
             {/* Overlay with contact details */}
-            <div className="absolute top-4 left-4 bg-background/95 p-4 rounded-lg shadow-lg max-w-sm">
+            <div className="absolute top-4 left-4 bg-background p-4 rounded-lg shadow-lg max-w-sm">
               <h3 className="text-xl font-semibold mb-2 flex items-center">
                 <MapPin className="w-5 h-5 text-primary mr-2" />
                   Flybit Dynamics Pvt Ltd
@@ -415,7 +413,7 @@ export default function Contact() {
               <Button 
                 size="sm"
                 onClick={() => window.open('https://maps.app.goo.gl/rDX4KkEGiytgmHaV6', '_blank')}
-                className="w-full"
+                className="w-full bg-[#f5a30a]"
               >
                 Get Directions
               </Button>

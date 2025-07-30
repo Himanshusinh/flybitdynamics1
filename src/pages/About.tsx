@@ -121,7 +121,7 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                Our <span className="text-primary">Vision</span>
+                Our <span className="text-[#f5a30a]">Vision</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground">
                 <p>
@@ -248,7 +248,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <Card key={index} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center group">
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gradient-to-r from-primary to-accent p-1">
+                <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-[#f5a30a] p-1">
                   <div className="w-full h-full rounded-full overflow-hidden bg-white">
                     <img 
                       src={member.image} 
