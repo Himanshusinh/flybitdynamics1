@@ -164,7 +164,7 @@ export default function Contact() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Let's Light Up the Sky <span className="bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Together!</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto ">
             Ready to create an unforgettable experience? Tell us your vision and we'll make it happen in the night sky.
           </p>
         </div>
@@ -177,7 +177,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-4xl font-bold mb-8">
-                Tell Us Your <span className="text-primary">Vision</span>
+                <span className="text-[#f5a30a]">Connect</span> with us 
               </h2>
               
               <Card className="p-8 card-gradient">

@@ -31,19 +31,19 @@ const techSpecs = [
     icon: Satellite,
     title: "GPS & RTK Precision",
     description: "Centimeter-level accuracy for perfect aerial choreography",
-    specs: ["RTK GPS correction", "±1cm positioning accuracy", "Real-time tracking"]
+    specs: ["RTK GPS correction", "±1-2cm positioning accuracy", "Real-time tracking"]
   },
   {
     icon: Radio,
     title: "Mesh Communication",
     description: "Robust communication network ensuring seamless coordination",
-    specs: ["2.4GHz + 5.8GHz dual-band", "Redundant communication paths", "1km+ range"]
+    specs: ["2.4GHz dual-band", "Redundant communication paths", "upto 500M range"]
   },
   {
     icon: Battery,
     title: "High-Capacity Batteries",
     description: "Extended flight time with intelligent power management",
-    specs: ["25+ minutes flight time", "Smart battery monitoring", "Hot-swappable design"]
+    specs: ["20+ minutes flight time", "Smart battery monitoring", "Hot-swappable design"]
   }
 ];
 
@@ -100,7 +100,7 @@ const safetyFeatures = [
   "Real-time weather monitoring",
   "Emergency landing zones",
   "Pilot override controls",
-  "360° obstacle detection"
+  "Software based hard fencing"
 ];
 
 const certifications = [
@@ -142,7 +142,7 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-primary">Hardware</span> Specifications
+              <span className="text-[#f5a30a]">Hardware</span> Specifications
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Military-grade components engineered for precision, reliability, and spectacular performance.
@@ -182,7 +182,7 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Proprietary <span className="text-primary">Software</span> Suite
+              Proprietary <span className="text-[#f5a30a]">Software</span> Suite
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               In-house developed software for animation, simulation, and real-time control of hundreds of drones.
@@ -223,7 +223,7 @@ export default function Technology() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
-                Safety <span className="text-primary">First</span>
+                Safety <span className="text-[#f5a30a]">First</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
                 Our comprehensive safety systems ensure every show is executed with the highest standards of security and reliability. Multiple redundancies and fail-safes protect both audience and equipment.
@@ -238,7 +238,7 @@ export default function Technology() {
                 ))}
               </div>
 
-              <Button className="btn-glow">
+              <Button className="btn-glow bg-[#f5a30a]">
                 Learn More About Safety
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
@@ -279,28 +279,28 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Technical <span className="text-primary">Capabilities</span>
+              Technical <span className="text-[#f5a30a]">Capabilities</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-primary mb-2">5000+</div>
+              <div className="text-4xl font-bold text-primary mb-2">500+</div>
               <div className="text-sm text-muted-foreground">Max Drones per Show</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-accent mb-2">±1cm</div>
+              <div className="text-4xl font-bold text-accent mb-2">±1-2cm</div>
               <div className="text-sm text-muted-foreground">Positioning Accuracy</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-purple-500 mb-2">25min</div>
+              <div className="text-4xl font-bold text-purple-500 mb-2">20min</div>
               <div className="text-sm text-muted-foreground">Flight time per show</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-orange-500 mb-2">1km+</div>
+              <div className="text-4xl font-bold text-orange-500 mb-2">500m</div>
               <div className="text-sm text-muted-foreground">Communication Range</div>
             </Card>
           </div>
@@ -311,7 +311,7 @@ export default function Technology() {
       <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Pushing the Boundaries of Innovation
+             Innovation beyond the sky
           </h2>
           <p className="text-xl mb-8 opacity-90">
             Our R&D team continuously develops new technologies to create even more spectacular and safe drone light shows.

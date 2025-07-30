@@ -131,7 +131,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/contact">
-              <Button size="lg" className="btn-glow text-lg px-8 py-4">
+              <Button size="lg" className="btn-glow text-lg px-8 py-4 bg-[#f5a30a]">
                 Book a Show <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
@@ -145,7 +145,8 @@ export default function Home() {
             </Button>
           </div>
           <p className="text-white/80 text-lg italic">
-            "Your moments are special. Let's make them unforgettable with a touch of sky magic."
+            {/* "Your moments are special. Let's make them unforgettable with a touch of sky magic." */}
+            "Let’s lighten up your event with a mesmerising drone show where creativity & technology outshine.
           </p>
         </div>
         
@@ -171,7 +172,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              India's Premier <span className="text-primary">Drone Light Show</span> Company
+              India's Premier <span className="text-primary">Drone Show</span> Company
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               We don't just create shows, we craft experiences that touch hearts and create memories that last a lifetime.
@@ -212,7 +213,7 @@ export default function Home() {
               One Technology. <span className="text-[#f5a30a]">Infinite Possibilities.</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From intimate weddings to grand corporate events, we bring your vision to life in the night sky.
+              From weddings to grand corporate events, we bring your vision to life in the night sky.
             </p>
           </div>
 
@@ -226,7 +227,7 @@ export default function Home() {
               },
               {
                 title: "Corporate Events", 
-                description: "Your brand deserves a grand canvas.",
+                description: "For your brand Sky is the canvas",
                 features: ["Logo animations", "Brand values", "Product showcases"]
               },
               {
@@ -257,7 +258,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link to="/services">
-              <Button size="lg" className="btn-glow">
+              <Button size="lg" className="btn-glow bg-[#f5a30a]">
                 View All Services <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

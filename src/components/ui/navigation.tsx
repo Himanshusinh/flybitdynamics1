@@ -18,7 +18,7 @@ const navigation = [
   //     { name: "Corporate Events", href: "/our-projects?category=corporate-events" },
   //     { name: "Government Events", href: "/our-projects?category=government-events" },
   //     { name: "Product Events", href: "/our-projects?category=product-events" },
-  //     { name: "Social Gathering", href: "/our-projects?category=social-gathering" },
+  //     { name: "Social Gathering", href: "/our-projcts?category=social-gathering" },
   //     { name: "Sports & Entertainment", href: "/our-projects?category=sports-entertainment" },
   //   ]
   // },
@@ -96,7 +96,7 @@ export function Navigation() {
               </div>
             ))}
             <Link to="/contact">
-              <Button variant="default" className="btn-glow">
+              <Button  className="bg-[#f5a30a]">
                 <Phone className="w-4 h-4 mr-2" />
                 Book a Show
               </Button>

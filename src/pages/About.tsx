@@ -36,23 +36,23 @@ const values = [
 const achievements = [
   {
     icon: Award,
-    title: "Industry Pioneer",
-    description: "First company in India to achieve 500+ drone synchronized shows"
-  },
-  {
-    icon: Globe,
-    title: "National Recognition",
-    description: "Featured in major government events including G20 and Republic Day celebrations"
-  },
-  {
-    icon: Zap,
     title: "Technical Excellence",
     description: "Proprietary software for real-time drone choreography and safety monitoring"
   },
   {
+    icon: Globe,
+    title: "India’s elite drone storytelling crew",
+    description: "Seamless storytelling via aerial choreography"
+  },
+  {
+    icon: Zap,
+    title: "Made-in-India drones",
+    description: "With faster support & centimetre level accuracy"
+  },
+  {
     icon: Users,
-    title: "Client Satisfaction",
-    description: "99% client satisfaction rate with over 100+ successful events"
+    title: "Safe airspace operation",
+    description: "Built-in fail-safes & anti-collision tech for Ultra-smooth aerial motion"
   }
 ];
 
@@ -108,7 +108,7 @@ export default function About() {
             <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
               We believe in the power of light, movement, and technology to create magic. From a spark of inspiration to sky-filling animations, our drone light shows are crafted with precision and passion.
             </p>
-            <div className="text-2xl font-space-grotesk font-semibold text-primary mb-8">
+            <div className="text-2xl  font-semibold mb-8 text-[#f5a30a]">
               "Where Wonder Begins"
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function About() {
                 />
               </div>
               <Card className="p-8 card-gradient glow-blue">
-                <h3 className="text-2xl font-bold mb-6 text-center">We Are More Than Technology</h3>
+                <h3 className="text-2xl font-bold mb-6 text-center">We are more than a Technology</h3>
                 <p className="text-muted-foreground text-center text-lg italic">
                   "We are storytellers of the sky, dream weavers, and memory makers. Every drone that takes flight carries with it our commitment to making your moment truly unforgettable."
                 </p>
@@ -206,7 +206,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose <span className="text-primary">FLYBIT Dynamics</span>
+              Why Choose <span className="text-[#f5a30a]">FLYBIT Dynamics</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               When you choose us, you're choosing excellence, innovation, and a team that cares as much about your event as you do.
@@ -273,7 +273,7 @@ export default function About() {
             Our Mission
           </h2>
           <p className="text-xl mb-8 opacity-90 leading-relaxed">
-            To revolutionize event entertainment through innovative drone technology, creating emotionally impactful performances that bring people together, celebrate human achievements, and inspire wonder in audiences across India and beyond.
+            To revolutionize event entertainment through innovative drone technology, creating emotionally impactful performances that bring people together, celebrate human achievements, and inspire wonder in audiences across India and beyond boundaries.
           </p>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-4">

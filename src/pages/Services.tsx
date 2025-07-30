@@ -222,7 +222,7 @@ export default function Services() {
             One Technology. <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Infinite Possibilities.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
-            From intimate celebrations to grand spectacles, we transform your vision into breathtaking aerial experiences that leave lasting impressions.
+            From celebrations to grand spectacles, we transform your vision into breathtaking aerial experiences that leave lasting impressions.
           </p>
         </div>
       </section>
@@ -314,7 +314,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-primary">Process</span>
+              Our <span className="text-[#f5a30a]">Process</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               From concept to execution, we ensure every detail is perfect for your unforgettable experience.
@@ -382,7 +382,7 @@ export default function Services() {
       <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Create Magic?
+            Are you Ready to Create Magic?
           </h2>
           <p className="text-xl mb-8 opacity-90">
             Let's discuss your vision and create a show that will leave your audience speechless.

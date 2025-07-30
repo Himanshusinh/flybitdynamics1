@@ -237,7 +237,7 @@ export default function FAQs() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="btn-glow text-lg px-8 py-4">
+              <Button size="lg" className="btn-glow text-lg px-8 py-4 bg-[#f5a30a]">
                 Schedule Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
