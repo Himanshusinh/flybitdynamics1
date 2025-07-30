@@ -121,34 +121,7 @@ export default function Home() {
         >
           <ArrowRight className="w-6 h-6" />
         </button>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-72">
-          <p className="text-white text-3xl leading-tight font-bold">Flybit Dynamics</p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
-            Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your event with breathtaking drone shows powered by cutting-edge technology and unforgettable experience.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Link to="/contact">
-              <Button size="lg" className="btn-glow text-lg px-8 py-4 bg-[#f5a30a]">
-                Book a Show <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            {/* <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4"
-            >
-              <Play className="mr-2 w-5 h-5" />
-              Watch Our Drones in Action
-            </Button> */}
-          </div>
-          <p className="text-white/80 text-lg italic">
-            {/* "Your moments are special. Let's make them unforgettable with a touch of sky magic." */}
-            "Let’s lighten up your event with a mesmerising drone show where creativity & technology outshine.
-          </p>
-        </div>
+       
         
         {/* Floating particles effect */}
         <div className="absolute inset-0 pointer-events-none">
@@ -167,6 +140,39 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="bg-[#eff5ec] h-[55vh] pt-10">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
+          <p className="text-black text-3xl leading-tight font-bold ">Flybit Dynamics</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
+            Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-[#181C19] mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your event with breathtaking drone shows powered by cutting-edge technology and unforgettable experience.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Link to="/contact">
+              <Button size="lg" className="btn-glow text-lg px-8 py-4 bg-[#f5a30a]">
+                Book a Show <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+            {/* <Button 
+              variant="outline" 
+              size="lg" 
+              className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4"
+            >
+              <Play className="mr-2 w-5 h-5" />
+              Watch Our Drones in Action
+            </Button> */}
+          </div>
+          <p className="text-[#181C19] text-lg italic mb-10">
+            {/* "Your moments are special. Let's make them unforgettable with a touch of sky magic." */}
+            "Let’s lighten up your event with a mesmerising drone show where creativity & technology outshine.
+          </p>
+        </div>
+      </div>
+
+
+      
       {/* Highlights Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -204,6 +210,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      
 
       {/* Services Preview */}
       <section className="py-20 bg-muted/30">
