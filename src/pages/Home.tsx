@@ -140,8 +140,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-[#eff5ec] h-[55vh] pt-10">
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
+      <div className="bg-[#E7E8E9] h-[55vh] flex flex-col justify-center items-center">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-black text-3xl leading-tight font-bold ">Flybit Dynamics</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
             Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
@@ -164,7 +164,7 @@ export default function Home() {
               Watch Our Drones in Action
             </Button> */}
           </div>
-          <p className="text-[#181C19] text-lg italic mb-10">
+          <p className="text-[#181C19] text-lg italic">
             {/* "Your moments are special. Let's make them unforgettable with a touch of sky magic." */}
             "Let’s lighten up your event with a mesmerising drone show where creativity & technology outshine.
           </p>
