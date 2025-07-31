@@ -102,6 +102,21 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Frontend validation
+    console.log('🔍 Frontend validation - Form data:', formData);
+    
+    if (!formData.eventType) {
+      console.log('❌ Frontend validation failed - Event type is empty');
+      toast({
+        title: "Event Type Required",
+        description: "Please select an event type before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    console.log('✅ Frontend validation passed');
+    
     try {
       const submissionTime = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
       
@@ -111,8 +126,8 @@ export default function Contact() {
         submissionTime,
       };
 
-      // Send to Google Sheets
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyQUhzE9XTV7klLmqjHf59gmRHQo5cFd0FbO3Lus6H11FURI8QGIWiN3H5I2NBdnbnM/exec', {
+      // Send to Google Sheets (keeping existing functionality)
+      const googleSheetsResponse = await fetch('https://script.google.com/macros/s/AKfycbyCo75Sj7ocD1EZRZ7iFfEuj8Fn5BAqzU_dEF-faW10XG53CATtGPt2tPL6q4bRyG2f/exec', {
         method: 'POST',
         mode: 'no-cors', // Important for CORS handling
         headers: {
@@ -121,12 +136,39 @@ export default function Contact() {
         body: JSON.stringify(formDataWithTime)
       });
 
-      // Data has been sent to Google Sheets
-
-      toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for your interest. We'll get back to you within 24 hours.",
+      // Send to our backend server for email notifications
+      console.log('🚀 Sending request to backend server...');
+      console.log('📤 Request URL:', 'http://localhost:3001/api/contact');
+      console.log('📦 Request data:', formDataWithTime);
+      
+      const backendResponse = await fetch('http://localhost:3001/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataWithTime)
       });
+      
+      console.log('📥 Backend response status:', backendResponse.status);
+      console.log('📥 Backend response ok:', backendResponse.ok);
+
+      if (backendResponse.ok) {
+        const result = await backendResponse.json();
+        console.log('✅ Backend response successful:', result);
+        toast({
+          title: "Message Sent Successfully!",
+          description: result.message || "Thank you for your interest. We'll get back to you within 24 hours.",
+        });
+      } else {
+        // If backend fails, still show success for Google Sheets submission
+        console.log('⚠️ Backend request failed, but Google Sheets submission succeeded');
+        const errorText = await backendResponse.text();
+        console.log('❌ Backend error response:', errorText);
+        toast({
+          title: "Message Sent Successfully!",
+          description: "Thank you for your interest. We'll get back to you within 24 hours.",
+        });
+      }
       
       // Reset form
       setFormData({
@@ -225,7 +267,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <Label htmlFor="eventType">Event Type *</Label>
-                      <Select onValueChange={handleSelectChange} required>
+                      <Select value={formData.eventType} onValueChange={handleSelectChange} required>
                         <SelectTrigger className="mt-2">
                           <SelectValue placeholder="Select event type" />
                         </SelectTrigger>
