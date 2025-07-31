@@ -138,10 +138,10 @@ export default function Contact() {
 
       // Send to our backend server for email notifications
       console.log('🚀 Sending request to backend server...');
-      console.log('📤 Request URL:', 'http://localhost:3001/api/contact');
+      console.log('📤 Request URL:', 'https://flybitemailserver.vercel.app/api/contact');
       console.log('📦 Request data:', formDataWithTime);
       
-      const backendResponse = await fetch('http://localhost:3001/api/contact', {
+      const backendResponse = await fetch('https://flybitemailserver.vercel.app/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
