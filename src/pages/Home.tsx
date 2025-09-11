@@ -124,7 +124,7 @@ export default function Home() {
        
         
         {/* Floating particles effect */}
-        <div className="absolute inset-0 pointer-events-none">
+{/*         <div className="absolute inset-0 pointer-events-none">
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
@@ -137,7 +137,7 @@ export default function Home() {
               }}
             />
           ))}
-        </div>
+        </div> */}
       </section>
 
       <div className="bg-[#E7E8E9] h-[55vh] flex flex-col justify-center items-center">
