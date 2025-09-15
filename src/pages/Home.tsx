@@ -39,7 +39,7 @@ const stats = [
 
 ];
 
-const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
+const heroImages = [heroImage4, heroImage2, heroImage3, heroImage1, heroImage5];
 
 export default function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -70,12 +70,12 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative w-full overflow-hidden flex items-center justify-center aspect-[4/3] md:aspect-[16/9] lg:aspect-auto lg:min-h-screen pb-6 md:pb-10">
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 min-h-screen bg-cover bg-center bg-no-repeat transition-all duration-1000 transform ${
+              className={`absolute inset-0 bg-black bg-contain  md:bg-cover bg-center bg-no-repeat transition-all duration-1000 transform ${
                 currentImageIndex === index
                   ? 'translate-x-0 opacity-100'
                   : currentImageIndex > index
@@ -96,7 +96,7 @@ export default function Home() {
             <button
               key={index}
               onClick={() => setCurrentImageIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
                 currentImageIndex === index
                   ? 'bg-white scale-125'
                   : 'bg-white/50 hover:bg-white/75'
@@ -140,9 +140,9 @@ export default function Home() {
         </div> */}
       </section>
 
-      <div className="bg-[#E7E8E9] h-[55vh] flex flex-col justify-center items-center">
+      <div className="bg-[#E7E8E9] h-[75vh] md:h-[55vh] flex flex-col justify-center items-center  md:pt-0">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-black text-3xl leading-tight font-bold ">Flybit Dynamics</p>
+          <p className="text-black text-3xl leading-tight font-bold  ">Flybit Dynamics</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
             Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
           </h1>
@@ -164,7 +164,7 @@ export default function Home() {
               Watch Our Drones in Action
             </Button> */}
           </div>
-          <p className="text-[#181C19] text-lg italic">
+          <p className="text-[#181C19] text-lg italic ">
             {/* "Your moments are special. Let's make them unforgettable with a touch of sky magic." */}
             "Let’s lighten up your event with a mesmerising drone show where creativity & technology outshine.
           </p>

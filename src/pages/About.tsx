@@ -6,9 +6,16 @@ import { Users, Target, Lightbulb, Award, ArrowRight, Heart, Zap, Globe } from "
 import aboutBanner from "@/assets/services/b1.jpg";
 import aboutJourney from "@/assets/about-journey.jpg";
 import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
 import teamMember3 from "@/assets/team-member-3.jpg";
 import teamMember4 from "@/assets/team-member-4.jpg";
+import teamMember2 from "@/assets/team-member-2.jpg";
+
+type TeamMember = {
+  name: string;
+  role: string;
+  description: string;
+  image?: string;
+};
 
 const values = [
   {
@@ -56,30 +63,31 @@ const achievements = [
   }
 ];
 
-const team = [
+const team: TeamMember[] = [
   {
     name: "Prateek Jain",
     role: "CEO",
     description: "",
-    // image: teamMember1
+    image: teamMember1
   },
   {
     name: "Jehan Patel",
-    role: "CTO",
+    role: "Tech Head",
     description: "",
-    // image: teamMember2
+    image: teamMember2
   },
   {
     name: "Vivek Patel",
     role: "Creative Director",
     description: "",
-    // image: teamMember3
+    image: teamMember3
   },
+  
   {
     name: "Gaurav Patel",
     role: "Director",
     description: "",
-    // image: teamMember4
+    image: teamMember4
   }
 ];
 
@@ -100,7 +108,7 @@ export default function About() {
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl h-[320px] md:h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               About <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">FLYBIT Dynamics</span>
@@ -234,7 +242,7 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-muted/30 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -251,7 +259,7 @@ export default function About() {
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-[#f5a30a] p-1">
                   <div className="w-full h-full rounded-full overflow-hidden bg-white">
                     <img 
-                      src={member.image} 
+                      src={member.image ?? teamMember1} 
                       alt={member.name}
                       className="w-full h-full object-cover"
                     />

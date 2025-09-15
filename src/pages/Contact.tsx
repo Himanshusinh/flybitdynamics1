@@ -39,7 +39,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    details: ["51.1 Satyamev Eminence, Science City Road", "Sola, Ahmedabad 380060"],
+    details: ["511, Satyamev Eminence, Science City Road", "Sola, Ahmedabad 380060"],
     action: "Get Directions",
     onClick: () => window.open("https://maps.app.goo.gl/rDX4KkEGiytgmHaV6", "_blank")
   },
@@ -449,7 +449,7 @@ export default function Contact() {
                   Flybit Dynamics Pvt Ltd
               </h3>
               <p className="text-muted-foreground text-sm mb-3">
-                51.1 Satyamev Eminence, Science City Road<br />
+                511, Satyamev Eminence, Science City Road<br />
                 Sola, Ahmedabad 380060
               </p>
               <Button 

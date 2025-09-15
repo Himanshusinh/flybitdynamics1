@@ -5,7 +5,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import flybitLogo from "@/assets/flybit-logo.png";
 
-const navigation = [
+type NavItem = {
+  name: string;
+  href: string;
+  subMenu?: { name: string; href: string }[];
+};
+
+const navigation: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Services", href: "/services" },
@@ -119,7 +125,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/100 backdrop-blur-md rounded-lg mt-2">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -132,7 +138,7 @@ export function Navigation() {
                     "block px-3 py-2 text-base font-medium transition-colors",
                     isActive(item.href) 
                       ? "text-primary" 
-                      : "text-[#3D473B] hover:text-primary"
+                      : "text-white/90 hover:text-primary"
                   )}
                 >
                   {item.name}
