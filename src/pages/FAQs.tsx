@@ -109,19 +109,21 @@ export default function FAQs() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section 
-        className="py-20 text-white relative"
+      <section
+        className="py-10 md:py-20 relative w-full overflow-hidden text-white aspect-[4/3] md:aspect-[16/9] lg:aspect-auto lg:min-h-[260px] flex items-center md:py-20"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${faqBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6">
             Frequently Asked <span className="bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Questions</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+          <p className="text-md md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
             Everything you need to know about FLYBIT Dynamics drone light shows. Can't find your answer? We're here to help!
           </p>
         </div>
@@ -146,7 +148,7 @@ export default function FAQs() {
 
           {/* FAQ Content */}
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
               {faqCategories[selectedCategory].title}
             </h2>
             
@@ -170,10 +172,10 @@ export default function FAQs() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Still Have <span className="text-[#f5a30a]">Questions?</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Our team is here to help you plan the perfect drone light show experience.
             </p>
           </div>
@@ -181,7 +183,7 @@ export default function FAQs() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
               <Phone className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Call Us</h3>
+              <h3 className="text-md md:text-xl font-semibold mb-4">Call Us</h3>
               <p className="text-muted-foreground mb-4">
                 Speak directly with our experts for immediate assistance.
               </p>
@@ -196,7 +198,7 @@ export default function FAQs() {
 
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
               <MessageCircle className="w-16 h-16 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">WhatsApp Chat</h3>
+              <h3 className="text-md md:text-xl font-semibold mb-4">WhatsApp Chat</h3>
               <p className="text-muted-foreground mb-4">
                 Quick responses to your questions via WhatsApp.
               </p>
@@ -210,7 +212,7 @@ export default function FAQs() {
 
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
               <Mail className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Email Support</h3>
+              <h3 className="text-md md:text-xl font-semibold mb-4">Email Support</h3>
               <p className="text-muted-foreground mb-4">
                 Detailed responses within 24 hours.
               </p>
@@ -229,19 +231,19 @@ export default function FAQs() {
       {/* Help Section */}
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need Personalized Assistance?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-md md:text-xl text-muted-foreground mb-8">
             Schedule a free consultation with our team to discuss your specific requirements and get expert recommendations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" className="btn-glow text-lg px-8 py-4 bg-[#f5a30a]">
+              <Button size="lg" className="btn-glow text-md md:text-lg px-8 py-4 bg-[#f5a30a]">
                 Schedule Free Consultation <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Button size="lg" className="text-lg px-8 py-4 bg-white text-black border border-[#e4e6eb] hover:text-white ">
+            <Button size="lg" className="text-md md:text-lg px-8 py-4 bg-white text-black border border-[#e4e6eb] hover:text-white ">
               Download FAQ Guide
             </Button>
           </div>

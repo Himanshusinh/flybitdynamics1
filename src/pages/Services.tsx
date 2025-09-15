@@ -210,18 +210,20 @@ export default function Services() {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section
-        className="py-20 text-white relative"
+        className="relative w-full overflow-hidden text-white aspect-[4/3] md:aspect-[16/9] lg:aspect-auto lg:min-h-[260px] flex items-center md:py-20"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${servicesBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 ">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-6xl font-bold mb-2 md:mb-6 ">
             One Technology. <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Infinite Possibilities.</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+          <p className="text-md md:text-2xl mb-4 md:mb-8 opacity-90 max-w-4xl mx-auto">
             From celebrations to grand spectacles, we transform your vision into breathtaking aerial experiences that leave lasting impressions.
           </p>
         </div>
@@ -238,7 +240,7 @@ export default function Services() {
                     <service.icon className={`w-8 h-8 ${service.color}`} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-md md:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
                     <p className="text-muted-foreground italic mb-3">
@@ -248,7 +250,7 @@ export default function Services() {
                 </div>
 
                 {/* 🔄 Image Slider with dots */}
-                <div className="relative w-full h-48 rounded-lg overflow-hidden mb-6 group">
+                <div className="relative w-full h-auto md:h-48 rounded-lg overflow-hidden mb-6 group">
                   <div className="relative w-full h-full">
                     {service.image.map((img, imgIndex) => (
                       <div
@@ -291,7 +293,7 @@ export default function Services() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm">
+                    <div key={idx} className="flex items-center text-md md:text-sm">
                       <Zap className="w-4 h-4 text-accent mr-2 flex-shrink-0" />
                       <span>{feature}</span>
                     </div>
@@ -313,10 +315,10 @@ export default function Services() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Our <span className="text-[#f5a30a]">Process</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               From concept to execution, we ensure every detail is perfect for your unforgettable experience.
             </p>
           </div>
@@ -325,7 +327,7 @@ export default function Services() {
             {processSteps.map((step, index) => (
               <Card key={index} className="p-6 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center group relative">
                 <div className="text-6xl font-bold text-primary/20 mb-4">{step.step}</div>
-                <h3 className="text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-md md:text-xl font-semibold mb-4 group-hover:text-primary transition-colors">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground">{step.description}</p>
@@ -345,7 +347,7 @@ export default function Services() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Why Choose Our <span className=" text-[#f5a30a]">Services</span>
             </h2>
           </div>
@@ -353,7 +355,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
               <Users className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Expert Team</h3>
+              <h3 className="text-md md:text-xl font-semibold mb-4">Expert Team</h3>
               <p className="text-muted-foreground">
                 Our experienced team of pilots, engineers, and creative directors ensure every show is executed flawlessly.
               </p>
@@ -361,7 +363,7 @@ export default function Services() {
 
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
               <Star className="w-16 h-16 text-accent mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">100% Customizable</h3>
+              <h3 className="text-md md:text-xl font-semibold mb-4">100% Customizable</h3>
               <p className="text-muted-foreground">
                 Every show is tailored to your specific needs, preferences, and creative vision. No two shows are ever the same.
               </p>
@@ -369,7 +371,7 @@ export default function Services() {
 
             <Card className="p-8 card-gradient hover:shadow-xl transition-all duration-300 text-center group">
               <Zap className="w-16 h-16 text-purple-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Latest Technology</h3>
+              <h3 className="text-md md:text-xl font-semibold mb-4">Latest Technology</h3>
               <p className="text-muted-foreground">
                 We use cutting-edge drone technology with GPS precision and advanced safety systems for perfect performances.
               </p>
@@ -381,15 +383,15 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Are you Ready to Create Magic?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-md md:text-xl mb-8 opacity-90">
             Let's discuss your vision and create a show that will leave your audience speechless.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+              <Button size="lg" variant="secondary" className="text-md md:text-lg px-8 py-4">
                 Get Custom Quote <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>

@@ -120,18 +120,18 @@ export default function Technology() {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section 
-        className="py-20 text-white relative"
+        className="py-10 md:py-20 text-white relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${technologyBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-7xl h-auto md:h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-6xl font-bold mb-2 md:mb-6">
             The Brains Behind <span className="bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">The Beauty</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto">
+          <p className="text-md md:text-2xl mb-4 md:mb-8 opacity-90 max-w-4xl mx-auto">
             At the heart of every FLYBIT show lies powerful software, high-precision drones, and synchronized choreography that pushes the boundaries of what's possible.
           </p>
         </div>
@@ -141,10 +141,10 @@ export default function Technology() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold mb-6">
               <span className="text-[#f5a30a]">Hardware</span> Specifications
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Military-grade components engineered for precision, reliability, and spectacular performance.
             </p>
           </div>
@@ -157,13 +157,13 @@ export default function Technology() {
                     <spec.icon className="w-8 h-8 text-primary" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                    <h3 className="text-md md:text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
                       {spec.title}
                     </h3>
                     <p className="text-muted-foreground mb-4">{spec.description}</p>
                     <div className="space-y-2">
                       {spec.specs.map((item, idx) => (
-                        <div key={idx} className="flex items-center text-sm">
+                        <div key={idx} className="flex items-center text-md md:text-sm">
                           <CheckCircle className="w-4 h-4 text-accent mr-2" />
                           <span>{item}</span>
                         </div>
@@ -181,10 +181,10 @@ export default function Technology() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Proprietary <span className="text-[#f5a30a]">Software</span> Suite
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               In-house developed software for animation, simulation, and real-time control of hundreds of drones.
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function Technology() {
                     <feature.icon className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-md md:text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                       {feature.title}
                     </h3>
                     <p className="text-muted-foreground mb-4">{feature.description}</p>
@@ -205,7 +205,7 @@ export default function Technology() {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {feature.features.map((item, idx) => (
-                    <div key={idx} className="flex items-center text-sm">
+                    <div key={idx} className="flex items-center text-md md:text-sm">
                       <Zap className="w-4 h-4 text-primary mr-2 flex-shrink-0" />
                       <span>{item}</span>
                     </div>
@@ -222,10 +222,10 @@ export default function Technology() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">
                 Safety <span className="text-[#f5a30a]">First</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-md md:text-lg text-muted-foreground mb-8">
                 Our comprehensive safety systems ensure every show is executed with the highest standards of security and reliability. Multiple redundancies and fail-safes protect both audience and equipment.
               </p>
               
@@ -233,7 +233,7 @@ export default function Technology() {
                 {safetyFeatures.map((feature, idx) => (
                   <div key={idx} className="flex items-center">
                     <Shield className="w-5 h-5 text-accent mr-3 flex-shrink-0" />
-                    <span className="text-sm">{feature}</span>
+                    <span className="text-md md:text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -265,7 +265,7 @@ export default function Technology() {
                 <img 
                   src={technologyImage}
                   alt="Advanced Drone Technology and Safety Systems"
-                  className="w-full h-[370px] object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-auto md:h-[370px] object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 
               </div>
@@ -278,29 +278,29 @@ export default function Technology() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Technical <span className="text-[#f5a30a]">Capabilities</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">500+</div>
               <div className="text-sm text-muted-foreground">Max Drones per Show</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-accent mb-2">±1-2cm</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">±1-2cm</div>
               <div className="text-sm text-muted-foreground">Positioning Accuracy</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-purple-500 mb-2">20min</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-500 mb-2">20min</div>
               <div className="text-sm text-muted-foreground">Flight time per show</div>
             </Card>
             
             <Card className="p-6 card-gradient hover:shadow-xl transition-all duration-300 text-center">
-              <div className="text-4xl font-bold text-orange-500 mb-2">500m</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-500 mb-2">500m</div>
               <div className="text-sm text-muted-foreground">Communication Range</div>
             </Card>
           </div>
@@ -310,20 +310,20 @@ export default function Technology() {
       {/* Innovation Section */}
       <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
              Innovation beyond the sky
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-md md:text-xl mb-8 opacity-90">
             Our R&D team continuously develops new technologies to create even more spectacular and safe drone light shows.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-4">
+              <Button size="lg" variant="secondary" className="text-md md:text-lg px-8 py-4">
                 Technical Partnership <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4">
+              <Button size="lg" variant="outline" className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-md md:text-lg px-8 py-4">
                 <Map className="mr-2 w-5 h-5" />
                 View Our Capabilities
               </Button>

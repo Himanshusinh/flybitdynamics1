@@ -70,14 +70,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden flex items-center justify-center aspect-[4/3] md:aspect-[16/9] lg:aspect-auto lg:min-h-screen pb-6 md:pb-10">
+      <section className="relative w-[100%] md:w-full overflow-hidden flex items-center justify-center  aspect-[4/3] md:aspect-[16/9] lg:aspect-auto lg:min-h-screen">
         <div className="absolute inset-0">
           {heroImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 bg-black bg-contain  md:bg-cover bg-center bg-no-repeat transition-all duration-1000 transform ${
+              className={`absolute inset-0 bg-cover mt-10 md:mt-0 bg-center bg-no-repeat transition-all duration-1000 transform ${
                 currentImageIndex === index
-                  ? 'translate-x-0 opacity-100'
+                  ? 'translate-x-0 opacity-100' 
                   : currentImageIndex > index
                   ? '-translate-x-full opacity-0'
                   : 'translate-x-full opacity-0'
@@ -140,13 +140,13 @@ export default function Home() {
         </div> */}
       </section>
 
-      <div className="bg-[#E7E8E9] h-[75vh] md:h-[55vh] flex flex-col justify-center items-center  md:pt-0">
+      <div className="bg-[#E7E8E9] h-auto md:h-[55vh] flex flex-col justify-center items-center py-10 md:pt-0">
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-black text-3xl leading-tight font-bold  ">Flybit Dynamics</p>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
+          <h1 className="text-4xl md:text-7xl font-bold mb-6 leading-tight text-[#f5a30a]">
             Where Wonder <span className="text-transparent bg-clip-text bg-[#f5a30a]">Begins</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[#181C19] mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-2xl text-[#181C19] mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform your event with breathtaking drone shows powered by cutting-edge technology and unforgettable experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

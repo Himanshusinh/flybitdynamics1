@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 import { Users, Target, Lightbulb, Award, ArrowRight, Heart, Zap, Globe } from "lucide-react";
 import aboutBanner from "@/assets/services/b1.jpg";
 import aboutJourney from "@/assets/about-journey.jpg";
-import teamMember1 from "@/assets/team-member-1.jpg";
-import teamMember3 from "@/assets/team-member-3.jpg";
-import teamMember4 from "@/assets/team-member-4.jpg";
-import teamMember2 from "@/assets/team-member-2.jpg";
+import teamMember1 from "@/assets/prateek.jpg";
+import teamMember3 from "@/assets/vivek.jpg";
+import teamMember4 from "@/assets/gaurav.jpg";
+import teamMember2 from "@/assets/jehan.jpg";
 
 type TeamMember = {
   name: string;
@@ -101,22 +101,22 @@ export default function About() {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section 
-        className="py-20 text-white relative"
+        className="py-6 md:py-20 text-white relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${aboutBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl h-[320px] md:h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl h-auto md:h-[260px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-2xl md:text-6xl font-bold mb-2 md:mb-6">
               About <span className=" bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">FLYBIT Dynamics</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+            <p className="text-md md:text-2xl mb-4 md:mb-8 opacity-90 leading-relaxed">
               We believe in the power of light, movement, and technology to create magic. From a spark of inspiration to sky-filling animations, our drone light shows are crafted with precision and passion.
             </p>
-            <div className="text-2xl  font-semibold mb-8 text-[#f5a30a]">
+            <div className="text-md md:text-2xl  font-semibold mb-4 md:mb-8 text-[#f5a30a]">
               "Where Wonder Begins"
             </div>
           </div>
@@ -128,10 +128,10 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">
                 Our <span className="text-[#f5a30a]">Vision</span>
               </h2>
-              <div className="space-y-6 text-lg text-muted-foreground">
+              <div className="space-y-6 text-md md:text-lg text-muted-foreground">
                 <p>
                   At FlyBit, our vision is to redefine the future of entertainment through cutting-edge drone light shows that captivate, inspire, and innovate. We aim to replace traditional fireworks with eco-friendly, safer, and more mesmerizing aerial displays powered by precision drone technology.
                 </p>
@@ -165,16 +165,16 @@ export default function About() {
             </div>
             <div className="relative">
               {/* Journey Image */}
-              <div className="w-full h-80 rounded-lg overflow-hidden mb-6">
+              <div className="w-full h-auto md:h-80 rounded-lg overflow-hidden mb-6">
                 <img 
                   src="/lovable-uploads/d16430af-f67e-462b-add5-f6cb1fc3e1be.png" 
                   alt="FLYBIT Dynamics - Professional drone light show display"
                   className="w-full h-full object-cover"
-                />
+                />  
               </div>
               <Card className="p-8 card-gradient glow-blue">
                 <h3 className="text-2xl font-bold mb-6 text-center">We are more than a Technology</h3>
-                <p className="text-muted-foreground text-center text-lg italic">
+                <p className="text-muted-foreground text-center text-md md:text-lg italic">
                   "We are storytellers of the sky, dream weavers, and memory makers. Every drone that takes flight carries with it our commitment to making your moment truly unforgettable."
                 </p>
               </Card>
@@ -187,10 +187,10 @@ export default function About() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Our <span className=" text-[#f5a30a]">Values</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               The principles that guide every decision, every show, and every moment we create.
             </p>
           </div>
@@ -201,7 +201,7 @@ export default function About() {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                <h3 className="text-md md:text-xl font-semibold mb-3">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </Card>
             ))}
@@ -213,10 +213,10 @@ export default function About() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Why Choose <span className="text-[#f5a30a]">FLYBIT Dynamics</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               When you choose us, you're choosing excellence, innovation, and a team that cares as much about your event as you do.
             </p>
           </div>
@@ -229,7 +229,7 @@ export default function About() {
                     <achievement.icon className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-md md:text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                       {achievement.title}
                     </h3>
                     <p className="text-muted-foreground">{achievement.description}</p>
@@ -242,13 +242,13 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-muted/30 ">
+      {/* <section className="py-20 bg-muted/30 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Meet Our <span className=" text-[#f5a30a]">Leadership</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-md md:text-xl text-muted-foreground max-w-3xl mx-auto">
               The visionaries and innovators behind every spectacular show.
             </p>
           </div>
@@ -265,22 +265,22 @@ export default function About() {
                     />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+                <h3 className="text-md md:text-xl font-semibold mb-2">{member.name}</h3>
                 <div className="text-primary font-medium mb-4">{member.role}</div>
                 <p className="text-muted-foreground text-sm">{member.description}</p>
               </Card>
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Mission Statement */}
       <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8">
             Our Mission
           </h2>
-          <p className="text-xl mb-8 opacity-90 leading-relaxed">
+          <p className="text-md md:text-xl mb-8 opacity-90 leading-relaxed">
             To revolutionize event entertainment through innovative drone technology, creating emotionally impactful performances that bring people together, celebrate human achievements, and inspire wonder in audiences across India and beyond boundaries.
           </p>
           <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
