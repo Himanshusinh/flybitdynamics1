@@ -235,22 +235,22 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card key={service.id} className="p-8 card-gradient hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                    <service.icon className={`w-8 h-8 ${service.color}`} />
+                <div className="flex items-start space-x-4 mb-2 md:mb-6">
+                  <div className={`w-10 h-10 md:w-16 md:h-16 rounded-full ${service.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                    <service.icon className={`w-6 h-6  md:w-8 md:h-8 ${service.color}`} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-md md:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-md md:text-2xl font-bold mb-0 md:mb-2 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-muted-foreground italic mb-3">
+                    <p className="text-muted-foreground text-sm md:text-base italic mb-3">
                       "{service.subtitle}"
                     </p>
                   </div>
                 </div>
 
                 {/* 🔄 Image Slider with dots */}
-                <div className="relative w-full h-auto md:h-48 rounded-lg overflow-hidden mb-6 group">
+                <div className="relative w-full aspect-[16/7] sm:aspect-[16/9] md:h-48 rounded-lg overflow-hidden mb-6 group">
                   <div className="relative w-full h-full">
                     {service.image.map((img, imgIndex) => (
                       <div
@@ -273,7 +273,7 @@ export default function Services() {
                   </div>
                   
                   {/* Navigation Dots */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2">
+                  <div className="absolute bottom-2 sm:bottom-3 md:bottom-4 left-0 right-0 flex justify-center gap-2">
                     {service.image.map((_, imgIndex) => (
                       <button
                         key={imgIndex}
@@ -300,9 +300,11 @@ export default function Services() {
                   ))}
                 </div>
                 <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
-                <Button className="w-full hover:[#f5a30a] bg-white text-black border border-[#e4e6eb] hover:border-white">
-                  Get Quote for {service.title}
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                <Button className="w-full bg-white text-black border border-[#e4e6eb] hover:border-white text-sm sm:text-base px-3 py-2 sm:px-4 sm:py-3 flex items-center gap-2 text-left leading-snug">
+                  <span className="flex-1 whitespace-normal break-words">
+                    Get Quote for {service.title}
+                  </span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </Button>
                 </Link>
               </Card>

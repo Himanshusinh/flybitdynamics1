@@ -195,30 +195,30 @@ export default function Contact() {
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section 
-        className="py-20 text-white relative"
+        className="py-10 md:py-20 text-white relative"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)), url(${contactBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <div className="max-w-7xl h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <div className="max-w-7xl h-auto md:  h-[260px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6">
             Let's Light Up the Sky <span className="bg-clip-text bg-gradient-to-r from-primary to-accent text-[#f5a30a]">Together!</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto ">
+          <p className="text-md md:text-2xl mb-8 opacity-90 max-w-4xl mx-auto ">
             Ready to create an unforgettable experience? Tell us your vision and we'll make it happen in the night sky.
           </p>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-background">
+      <section className="py-10 md:py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div>
-              <h2 className="text-4xl font-bold mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 <span className="text-[#f5a30a]">Connect</span> <span className="text-[#3D473B]">With us</span>
               </h2>
               
@@ -337,14 +337,14 @@ export default function Contact() {
                 <img 
                   src={contactimag}
                   alt="Contact FLYBIT Dynamics - Professional drone show consultation" 
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
+                  className="w-full h-auto md:h-64 object-cover rounded-lg shadow-lg"
                 />
               </div>
             </div>
 
             {/* Contact Information */}
             <div>
-            <h2 className="text-4xl font-bold mb-8 text-[#3D473B]">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#3D473B]">
               Get in <span className="text-[#f5a30a]">Touch</span>
             </h2>              <div className="space-y-6 mb-8">
                 {contactInfo.map((info, index) => (
@@ -355,7 +355,7 @@ export default function Contact() {
                       </div>
                       
                       <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2 text-[#3D473B]">{info.title}</h3>
+                        <h3 className="text-md md:text-lg font-semibold mb-2 text-[#3D473B]">{info.title}</h3>
                         {info.details.map((detail, idx) => (
                           <p key={idx} className="text-muted-foreground">{detail}</p>
                         ))}
@@ -398,7 +398,7 @@ export default function Contact() {
 
               {/* Social Media */}
               <Card className="p-6 card-gradient">
-                <h3 className="text-xl font-semibold mb-4">Follow Us on Socail Media</h3>
+                <h3 className="text-md md:text-xl font-semibold mb-4">Follow Us on Socail Media</h3>
                 <div className="space-y-3">
                   {socialLinks.map((social) => (
                     <a
@@ -424,10 +424,10 @@ export default function Contact() {
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Visit Our <span className="text-[#f5a30a]">Studio</span>
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-md md:text-xl text-muted-foreground">
               Located in Ahmedabad, our studio is equipped with the latest drone technology and testing facilities.
             </p>
           </div>
@@ -467,17 +467,17 @@ export default function Contact() {
       {/* CTA Section */}
       <section className="py-20 bg-[#f5a30a] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             Ready to Create Magic?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-md md:text-xl mb-8 opacity-90">
             Join hundreds of satisfied clients who have made their events unforgettable with FLYBIT Dynamics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               variant="secondary" 
-              className="text-lg px-8 py-4"
+              className="text-md md:text-lg px-8 py-4"
               onClick={() => window.location.href = "tel:+919664612798"}
             >
               <Phone className="mr-2 w-5 h-5" />
@@ -486,7 +486,7 @@ export default function Contact() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-lg px-8 py-4"
+              className="text-[#3D473B] border-white bg-white hover:bg-primary hover:text-white text-md md:text-lg px-8 py-4"
               onClick={() => window.open('https://wa.me/919664612798?text=Hi! I am interested in your drone light show services.', '_blank')}
             >
               <MessageCircle className="mr-2 w-5 h-5" />
