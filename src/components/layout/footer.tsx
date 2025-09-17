@@ -26,9 +26,9 @@ const navigation = {
 };
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, href: "#" },
-  { name: "YouTube", icon: Youtube, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/flybitdynamics" },
+  { name: "YouTube", icon: Youtube, href: "https://youtube.com/@flybitdynamics" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/company/flybitdynamics" },
   { name: "WhatsApp", icon: MessageCircle, href: "#" },
 ];
 
