@@ -4,8 +4,8 @@ import './index.css'
 
 createRoot(document.getElementById("root")!).render(
     <>
-    <div className=''> Salary Karo</div>
-    {/* <App /> */}
+    
+    <App />
     </>
 
 );
