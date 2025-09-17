@@ -63,9 +63,9 @@ const eventTypes = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", icon: Instagram, href: "#", followers: "50K+" },
-  { name: "YouTube", icon: Youtube, href: "#", followers: "25K+" },
-  { name: "LinkedIn", icon: Linkedin, href: "#", followers: "10K+" },
+  { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/flybitdynamics", followers: "50K+" },
+  { name: "YouTube", icon: Youtube, href: "https://youtube.com/@flybitdynamics", followers: "25K+" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://in.linkedin.com/company/flybitdynamics", followers: "10K+" },
 ];
 
 export default function Contact() {
