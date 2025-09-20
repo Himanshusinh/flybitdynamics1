@@ -8,16 +8,17 @@ import { Badge } from "@/components/ui/badge";
 import { Heart, Building2, Flag, Rocket, Church, Trophy, ArrowRight, Zap, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import serviceSocial1 from "@/assets/services/social-sevices-01.png";
-import serviceSocial2 from "@/assets/services/social-sevices-02.png";
+import serviceSocial2 from "@/assets/services/social sevices 03.png";
+
 import serviceSocial3 from "@/assets/services/corporate-events-01.png";
 import serviceSocial4 from "@/assets/services/corporate-events-02.png";
 import serviceSocial5 from "@/assets/services/govt-and-national-events.png";
 import serviceSocial6 from "@/assets/services/govt-and-national-events-02.png";
 import serviceSocial7 from "@/assets/services/products-launches-01.png";
 import serviceSocial8 from "@/assets/services/products-launches-02.png";
-import serviceSocial9 from "@/assets/services/spiritual-gathering-01.png";
+import serviceSocial9 from "@/assets/services/spiritual gathering 03.png";
 import serviceSocial10 from "@/assets/services/spiritual-gathering-02.png";
-import serviceSocial11 from "@/assets/services/sports-and-entertainment-01.png";
+import serviceSocial11 from "@/assets/services/sports and entertainment 03.png";
 import serviceSocial12 from "@/assets/services/sports-and-entertainment-02.png";
 import servicesBanner from "@/assets/b2.jpg";
 
